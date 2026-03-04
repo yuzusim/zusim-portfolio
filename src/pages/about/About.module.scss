@@ -1,0 +1,45 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.about {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.1),
+    rgba(1, 239, 0, 1),
+    rgba(1, 239, 0, 1),
+    rgba(1, 239, 0, 0.5),
+    rgba(255, 255, 255, 0.9)
+  );
+
+  .title {
+    margin-bottom: 150px;
+  }
+}
+
+.aboutMargin {
+  margin: 150px 60px;
+}
+
+.skills {
+  // .title {
+  //   p {
+  //     color: #fff;
+  //   }
+  // }
+}
+
+// 767px
+@include mix.respond(mobile) {
+  .about {
+    .title {
+      margin-bottom: 50px;
+    }
+  }
+
+  .aboutMargin {
+    margin: 100px 32px;
+  }
+}

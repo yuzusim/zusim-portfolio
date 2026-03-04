@@ -1,0 +1,392 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.container {
+  .sec02,
+  .sec05 {
+    padding: 150px 60px;
+  }
+
+  // 767px
+  @include mix.respond(mobile) {
+    .sec02,
+    .sec05 {
+      padding: 100px 32px;
+    }
+  }
+
+  // 메인
+  .sec01 {
+    padding: 60px 60px;
+
+    .bigTit {
+      font-size: 126px;
+      font-weight: 700;
+      line-height: 1.2;
+      overflow: hidden; // 튀어나오는 글자 숨김
+    }
+
+    .bigTit .line {
+      margin: 0;
+      line-height: 1;
+    }
+
+    .subTit {
+      margin: 100px 0 0;
+    }
+
+    // .desc {
+    //   will-change: transform, opacity;
+    // }
+
+    // .desc {
+    //   background: linear-gradient(120deg, #cfcfcf 100%, #000 100%);
+    //   -webkit-background-clip: text;
+    //   -webkit-text-fill-color: transparent;
+    // }
+
+    // 767px
+    @include mix.respond(mobile) {
+      padding: 85px 24px;
+
+      .bigTit {
+        font-size: 82px;
+      }
+    }
+  }
+
+  // AboutPreview
+  .sec02 {
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.9),
+      // rgba(255, 255, 255, 0.9),
+      rgba(1, 239, 0, 0.1),
+      rgba(1, 239, 0, 0.5)
+    );
+
+    .aboutTxt {
+      display: flex;
+      justify-content: space-between;
+      line-height: 2.5em;
+
+      .subTxt {
+        margin: 150px 150px 0 0;
+      }
+    }
+
+    // 767px
+    @include mix.respond(mobile) {
+      .aboutTxt {
+        flex-flow: column;
+      }
+
+      .subTxt {
+        margin: 50px 0 0 0 !important;
+        font-size: 24px !important;
+      }
+    }
+  }
+
+  // ProjectPreview
+  .sec03 {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  // WorkPreview
+  .sec04 {
+    .workInner {
+      height: 100vh;
+      display: flex;
+
+      .workLeft {
+        margin: 150px 60px;
+        width: 50%;
+
+        .title {
+          margin: 0 0 50px;
+        }
+
+        .moreBtn {
+          display: inline-block;
+          margin: 30px 0 0;
+          // font-weight:;
+        }
+      }
+
+      .workRight {
+        width: 50%;
+        overflow: hidden;
+        position: relative;
+
+        display: grid;
+        grid-template-rows: repeat(4, auto); // 3단
+        gap: 20px;
+
+        .rotateBox {
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          width: 180%;
+          height: 180%;
+          transform: translate(-50%, -50%) rotate(30deg);
+        }
+
+        .gridSlider {
+          display: flex;
+          gap: 20px;
+          white-space: nowrap;
+          margin-bottom: 20px;
+        }
+
+        .card {
+          flex: 0 0 auto;
+          width: 500px;
+          height: 300px;
+          border-radius: 20px;
+
+          transition:
+            transform 0.4s ease,
+            box-shadow 0.4s ease;
+
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+
+          &:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.3);
+            z-index: 5;
+          }
+        }
+
+        .mockup {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+        }
+
+        .rowDown {
+          animation: slideDown 25s linear infinite;
+        }
+
+        .rowUp {
+          animation: slideUp 30s linear infinite;
+        }
+      }
+    }
+
+    // 767px
+    @include mix.respond(mobile) {
+      // background-color: #dddddd;
+
+      .workInner {
+        display: block;
+        overflow: hidden;
+
+        .workLeft {
+          margin: 100px 32px;
+          width: auto;
+
+          .moreBtn {
+            margin: 0 0 0;
+          }
+          z-index: 999;
+        }
+
+        .workRight {
+          width: auto;
+          height: 100%;
+          // top: 10%;
+          overflow: visible;
+          z-index: -1;
+
+          .card {
+            // flex: 0 0 auto;
+            width: 300px;
+            height: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  // Contact
+  .sec05 {
+    background-color: var.$color-bk;
+    color: var.$color-secondary;
+    position: relative;
+    transition: background-color 0.3s ease;
+
+    .title {
+      color: var.$color-white;
+    }
+
+    .contactInner {
+      display: flex;
+      justify-content: space-between;
+      margin: 50px 0 0;
+    }
+
+    .contactForm {
+      position: relative;
+      z-index: 10; // 폼이 팝업보다 위에 나오지 않도록
+    }
+
+    .successBg {
+      background-color: rgba(0, 0, 0, 0.8); // 성공 시 배경 검정
+    }
+
+    .successPopup {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #4caf50;
+      color: white;
+      padding: 50px 50px;
+      border-radius: 8px;
+      z-index: 20;
+
+      animation: popupFade 0.5s ease forwards;
+    }
+
+    .contactLeft {
+      width: 50%;
+      font-size: 38px;
+      line-height: 1.8;
+    }
+
+    .contactRight {
+      width: 45%;
+
+      .subTxt {
+        margin: 0 50px 50px;
+        position: relative;
+
+        h2 {
+          font-size: 38px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 10px;
+          left: -50px;
+          width: 32px;
+          height: 32px;
+          border-radius: 50px;
+          background-color: var.$btn-color;
+        }
+      }
+
+      .snedBox {
+        display: block;
+        width: auto;
+        background-color: var.$color-bk;
+        color: var.$color-white;
+        font-size: 24px;
+
+        input,
+        textarea,
+        button {
+          width: 100%;
+          padding: 30px 20px;
+          background-color: var.$color-bk;
+          color: var.$color-white;
+          margin: 0 0 20px;
+          border-radius: 15px;
+          font-size: 24px;
+
+          outline: none;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+
+          &:focus {
+            border-color: var.$btn-color;
+          }
+        }
+
+        textarea {
+          padding: 30px 20px 100px;
+          resize: none; // 드래그 크기 조절 막기 (선택)
+        }
+
+        button {
+          background-color: var.$btn-color;
+          font-weight: bold;
+          transition: 0.3s ease;
+
+          &:hover {
+            background-color: var.$background-color-white;
+            color: var.$color-bk;
+            // opacity: 0.85;
+          }
+        }
+      }
+    }
+
+    // 767px
+    @include mix.respond(mobile) {
+      .contactInner {
+        display: block;
+      }
+
+      .contactLeft {
+        width: auto;
+        // font-size: 38px;
+        // line-height: 1.8;
+      }
+
+      .contactRight {
+        width: auto;
+
+        .subTxt {
+          margin: 50px 32px;
+          position: relative;
+
+          h2 {
+            font-size: 32px;
+          }
+
+          &::after {
+            // content: "";
+            // position: absolute;
+            top: 5px;
+            left: -40px;
+            width: 28px;
+            height: 28px;
+            // border-radius: 50px;
+            // background-color: var.$btn-color;
+          }
+        }
+
+        .snedBox {
+          // display: block;
+          // width: auto;
+          // background-color: var.$color-bk;
+          // color: var.$color-white;
+          font-size: 22px;
+
+          input,
+          textarea,
+          button {
+            // width: 100%;
+            padding: 20px 20px;
+            // background-color: var.$color-bk;
+            // color: var.$color-white;
+            // margin: 0 0 20px;
+            // border-radius: 15px;
+            font-size: 24px;
+          }
+
+          textarea {
+            padding: 30px 20px;
+          }
+        }
+      }
+    }
+  }
+}

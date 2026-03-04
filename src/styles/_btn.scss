@@ -1,0 +1,58 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+.moreBtn {
+  padding: 20px 30px;
+  border-radius: 50px;
+  background-color: var.$btn-color;
+  font-size: 24px;
+  // color: var.$color-secondary;
+  color: var.$color-white;
+
+  &:hover {
+    background-color: #000;
+    transition: all 0.5s ease;
+  }
+}
+
+.linkBtn {
+  padding: 10px 50px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+  font-weight: bold;
+
+  &:hover {
+    background-color: var.$btn-color;
+    transition: all 0.5s ease;
+    border: none;
+  }
+}
+
+.workBtnWrap {
+  display: flex;
+  justify-content: flex-end; // 오른쪽 정렬
+  // margin-top: 20px;
+}
+
+// 어바웃 커리어 부분 버튼
+.workBtn {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var.$btn-color;
+  font-size: 24px;
+  font-weight: bold;
+  color: var.$color-white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  text-align: center;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #000;
+  }
+}

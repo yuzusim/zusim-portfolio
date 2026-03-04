@@ -1,0 +1,287 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.work {
+  //   padding: 150px 60px;
+
+  // .subTit {
+  //   font-size: 38px;
+  //   // margin: 50px 0 0;
+  //   line-height: 1.5em;
+  // }
+
+  .workTop {
+    // height: 500px;
+    background-color: #000;
+    color: #fff;
+    padding: 150px 60px;
+    position: relative;
+
+    // 767px
+    @include mix.respond(mobile) {
+      padding: 100px 32px;
+    }
+
+    /* 🟢 초록 배경을 여기(상단)에 깐다 */
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 120px;
+      background: radial-gradient(
+        circle at 50% 60%,
+        rgba(1, 239, 0, 0.55),
+        // rgba(3, 214, 233, 0.55),
+        // rgba(0, 120, 255, 0.35),
+        // rgba(4, 105, 114, 0.35),
+        transparent 100%
+      );
+      filter: blur(60px);
+
+      border-radius: 60px 60px 0 0;
+      z-index: 1;
+    }
+  }
+
+  .workBottom {
+    position: relative;
+    background: #fff;
+    border-radius: 50px 50px 0 0;
+    padding: 150px 60px;
+    margin-top: -50px;
+    z-index: 2;
+
+    // 767px
+    @include mix.respond(mobile) {
+      padding: 100px 32px;
+    }
+  }
+
+  // 탭 스타일
+  .tabs {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 80px;
+
+    button {
+      padding: 15px 35px;
+      border-radius: 999px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+      font-size: 24px;
+
+      &.active {
+        background: #000;
+        color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+
+  // 카드 그리드
+  .gridWrap {
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      //   margin-bottom: 100px;
+
+      // 카드
+      .card {
+        display: block;
+        border-radius: 16px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      // 이미지
+      .imgWrap {
+        position: relative;
+        width: 100%;
+        height: 450px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: 0.4s;
+        }
+      }
+
+      // 호버시 정보
+      .hoverInfo {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 40px 30px;
+        opacity: 0;
+        transition: 0.3s;
+        line-height: 1.5;
+
+        .title {
+          font-size: 32px;
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+
+        .sub {
+          font-size: 18px;
+          margin-bottom: 13px;
+        }
+
+        .category {
+          display: flex;
+          gap: 6px;
+          //   margin-bottom: 6px;
+
+          span {
+            padding: 6px 10px;
+            border-radius: 999px; // 둥근 탭 모양
+            // background: rgba(255, 255, 255, 0.15);
+            // backdrop-filter: blur(4px); // 살짝 유리 느낌 (선택)
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            font-size: 16px;
+            color: #fff;
+          }
+        }
+      }
+
+      .card:hover {
+        img {
+          transform: scale(1.05);
+        }
+
+        .hoverInfo {
+          opacity: 1;
+        }
+      }
+    }
+
+    // more 버튼
+    .more {
+      margin: 50px auto 0;
+      text-align: center;
+
+      button {
+        border: 0;
+        font-weight: bold;
+      }
+    }
+
+    // 767px
+    @include mix.respond(mobile) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+
+        // 이미지
+        .imgWrap {
+          height: 250px;
+        }
+
+        // 호버시 정보
+        .hoverInfo {
+          padding: 20px 18px;
+
+          .title {
+            font-size: 24px;
+            margin-bottom: 40px;
+          }
+
+          .sub {
+            font-size: 18px;
+            margin-bottom: 13px;
+          }
+
+          .category {
+            gap: 6px;
+
+            span {
+              padding: 8px;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 모바일 탭 전용
+.select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.mobileFilter {
+  position: relative;
+  margin-bottom: 24px;
+
+  // 드롭다운 버튼
+  .filterBtn {
+    width: 100%;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 40px;
+
+    // 화살표 오른쪽 정렬 (float 대신 flex)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .arrow {
+      font-size: 14px;
+      transition: transform 0.3s ease;
+
+      // 버튼 클릭 시 회전 애니메이션
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  // 드롭다운 메뉴
+  .dropdown {
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-top: -40px;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    li {
+      padding: 12px 16px;
+      cursor: pointer;
+
+      &:hover {
+        background: #f5f5f5;
+      }
+
+      // 선택 상태
+      &.selected {
+        font-weight: bold;
+        color: #000;
+        background: #eaeaea;
+      }
+    }
+  }
+}

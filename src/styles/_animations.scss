@@ -1,0 +1,164 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+
+// 델픽
+@keyframes diagonalLTR {
+  0% {
+    transform: rotate(-40deg) translateX(-50%);
+  }
+  100% {
+    transform: rotate(-40deg) translateX(50%);
+  }
+}
+
+@keyframes diagonalRTL {
+  0% {
+    transform: rotate(-40deg) translateX(50%);
+  }
+  100% {
+    transform: rotate(-40deg) translateX(-50%);
+  }
+}
+
+// 벤츠
+@keyframes fadeUpSkew {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+    // transform: rotate(15deg) skewX(2deg) translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUpSkew-1 {
+  0% {
+    opacity: 0;
+    transform: rotate(15deg) skewX(2deg) translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(15deg) skewX(2deg) translateX(50px);
+  }
+}
+
+@keyframes fadeUpSkew-2 {
+  0% {
+    opacity: 0;
+    transform: rotate(9deg) skewX(2deg) skewY(-12deg) translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(9deg) skewX(2deg) skewY(-12deg) translateX(100px);
+  }
+}
+
+// 디즈니
+@keyframes glow {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(50px);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popupFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+// @keyframes slideLTR {
+//   from {
+//     transform: translateX(-50%);
+//   }
+//   to {
+//     transform: translateX(50%);
+//   }
+// }
+
+// @keyframes slideRTL {
+//   from {
+//     transform: translateX(50%);
+//   }
+//   to {
+//     transform: translateX(-50%);
+//   }
+// }
+
+@keyframes slideDown {
+  from {
+    transform: translateX(-40%);
+  }
+  to {
+    transform: translateX(40%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(40%);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+// @keyframes slideUp {
+//   from {
+//     transform: translateY(0);
+//   }
+//   to {
+//     transform: translateY(-50%);
+//   }
+// }
+
+// @keyframes slideDown {
+//   from {
+//     transform: translateY(-50%);
+//   }
+//   to {
+//     transform: translateY(0);
+//   }
+// }

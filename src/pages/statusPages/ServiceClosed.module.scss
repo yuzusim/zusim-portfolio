@@ -1,0 +1,45 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.closedPage {
+  padding: 100px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; // 화면 중간 정도
+  text-align: center;
+
+  h2 {
+    font-size: 96px;
+    line-height: 1.5em;
+    color: #000;
+    margin-bottom: 40px;
+  }
+
+  p {
+    font-size: 32px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.5em;
+  }
+
+  a {
+    font-weight: bold;
+  }
+
+  // 767px
+  @include mix.respond(mobile) {
+    padding: 100px 32px;
+
+    h2 {
+      font-size: 58px;
+    }
+
+    p {
+      font-size: 24px;
+    }
+  }
+}

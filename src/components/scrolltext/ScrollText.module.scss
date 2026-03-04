@@ -1,0 +1,89 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.scrollText {
+}
+
+.group {
+}
+
+.line {
+  line-height: 1.6;
+  display: block;
+}
+
+.char {
+  display: inline-block;
+  //   opacity: 0.2;
+  //   transition: opacity 0.3s ease;
+}
+
+// 메인 타이틀
+// .bigTit {
+//   font-size: 96px;
+//   font-weight: bold;
+//   // letter-spacing: 1em;
+// }
+
+.subTit {
+  font-size: 38px;
+  margin: 50px 0 0;
+  line-height: 1.5em;
+}
+
+///////////// 문단별 스타일 //////////////////
+
+// 어바웃
+.paragraphMain {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.paragraphSub {
+  font-weight: 300;
+  font-size: 28px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+// 컨텐츠
+
+// 767px
+@include mix.respond(mobile) {
+  .paragraphMain {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .paragraphSub {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .paragraphText {
+    font-size: 24px;
+  }
+
+  .subTit {
+    font-size: 32px;
+    // margin: 50px 0 0;
+    // line-height: 1.5em;
+  }
+
+  .paragraphMain .line,
+  .paragraphSub .line,
+  .paragraphText .line,
+  .subTit .line {
+    display: inline;
+  }
+
+  .paragraphMain .line::after,
+  .paragraphSub .line::after,
+  .paragraphText .line::after,
+  .subTit .line::after {
+    content: " ";
+  }
+}

@@ -1,0 +1,29 @@
+@use "styles/variables" as var;
+@use "styles/mixins" as mix;
+@use "styles/btn" as btn;
+@use "styles/animations" as ani;
+
+.lineWrap {
+  position: fixed;
+  top: 0;
+  left: 35%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  // 767px
+  @include mix.respond(mobile) {
+    // top: -0;
+    top: -15%;
+    left: 65%;
+    // transform: none;
+  }
+}
