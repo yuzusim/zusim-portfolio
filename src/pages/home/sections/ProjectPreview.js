@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "../Home.module.scss";
 import ProjectSlider from "components/mainproject/ProjectSlider";
 

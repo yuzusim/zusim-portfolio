@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styles from "./About.module.scss";
 
 import AnimatedText from "components/text/AnimatedText";
