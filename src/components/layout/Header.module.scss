@@ -97,6 +97,13 @@
     font-size: 52px;
     font-weight: 800;
   }
+
+  // 767px
+  @include mix.respond(mobile) {
+    a {
+      font-size: 32px;
+    }
+  }
 }
 
 .menu.open {
