@@ -24,7 +24,7 @@ export const mainProjectData = [
       { src: "/images/del_mockup_1.jpg", size: "medium", row: 3 },
     ],
 
-    // link: "/projects/delphic",
+    link: "https://yuzusim.github.io/Delpic_Renewal/",
   },
 
   {
