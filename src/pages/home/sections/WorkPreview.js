@@ -15,7 +15,6 @@ function WorkPreview() {
             <p>WORK</p>
           </div>
           <ScrollText data={scrollTextData.work} />
-
           <Link to={link} className={`${styles.moreBtn}`}>
             MORE WORK
           </Link>
