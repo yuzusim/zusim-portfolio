@@ -54,7 +54,7 @@ export const mainProjectData = [
       ],
     },
 
-    // link: "/projects/delphic",
+    link: "https://yuzusim.github.io/Benz_Renewal/",
   },
   {
     id: 3,
@@ -70,7 +70,7 @@ export const mainProjectData = [
       { src: "/images/mockup_3-2.png", class: "right", size: "disney-medium" },
     ],
 
-    // link: "/projects/delphic",
+    link: "https://disney-renewal.vercel.app/",
   },
 
   // {
