@@ -83,7 +83,6 @@
 
   // ProjectPreview
   .sec03 {
-    //height: 100vh;
     overflow: hidden;
 
     // 767px
@@ -95,7 +94,7 @@
   // WorkPreview
   .sec04 {
     .workInner {
-      height: 100vh;
+      height: 100dvh;
       display: flex;
 
       .workLeft {
