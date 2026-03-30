@@ -5,11 +5,11 @@
 
 .projectSlider {
   width: 100%;
-  // height: 100vh;
   height: 100dvh;
   color: #fff;
-  overflow: hidden;
+
   //   margin: 100px;
+  overflow: hidden;
 
   // Swiper 높이 채우기
   :global(.swiper),
@@ -25,7 +25,7 @@
     background-size: cover; // 화면 전체를 꽉 채움
     background-position: center; // 중앙 기준
     background-repeat: no-repeat; // 반복하지 않음
-    // padding: 100px 0;
+    overflow: hidden;
 
     // 배경 오버레이
     .overlay {
@@ -43,9 +43,7 @@
       display: flex;
       align-items: flex-start;
       box-sizing: border-box;
-
       padding: 100px 60px 200px;
-      // margin-bottom: 100px;
 
       // 767px
       @include mix.respond(mobile) {
@@ -58,8 +56,6 @@
         z-index: 2;
 
         .title {
-          // font-size: 96px;
-          // font-weight: 600;
           padding: -100px 0 0;
         }
 
@@ -88,17 +84,12 @@
 
         // 767px
         @include mix.respond(mobile) {
-          // flex-flow: column;
-
           // TEXT AREA
 
           // 인덱스 번호
           .index {
             font-size: 68px;
-            // font-weight: 700;
-            // line-height: 1;
             margin: 30px 0 10px;
-            // opacity: 0.4;
           }
 
           // 프로젝트 제목
@@ -108,11 +99,7 @@
 
           // 프로젝트 설명
           .desc {
-            // font-size: 24px;
-            // line-height: 1.6;
-            // color: #ccc;
             margin: 30px 0;
-            // max-width: 420px;
           }
         }
       }
@@ -133,13 +120,9 @@
             gap: 20px;
             flex-wrap: nowrap;
             transform: rotate(-45deg);
-            // overflow: hidden;
             margin-bottom: 130px;
 
             .mockup {
-              //   flex-shrink: 0;
-              //   object-fit: cover;
-
               // 목업 사이즈 정의
               &.small {
               }
@@ -166,17 +149,9 @@
           // 767px
           @include mix.respond(mobile) {
             .gridSlider {
-              // display: flex;
-              // gap: 20px;
-              // flex-wrap: nowrap;
-              // transform: rotate(-45deg);
-              // // overflow: hidden;
               margin-bottom: 80px;
 
               .mockup {
-                //   flex-shrink: 0;
-                //   object-fit: cover;
-
                 // 목업 사이즈 정의
                 &.small {
                 }
@@ -212,7 +187,6 @@
             right: 120px;
             top: 50%;
             transform: translateY(-50%);
-            // opacity: 0;
           }
 
           // 벤츠 floating 목업 이미지 위치 전용
@@ -278,10 +252,8 @@
         .disneyVisual {
           position: relative;
           display: flex;
-          // justify-content: flex-end;
           justify-content: center;
           align-items: center;
-          // overflow: visible;
 
           .mockupWrap {
             position: absolute;
@@ -346,43 +318,29 @@
 
           // 767px
           @include mix.respond(mobile) {
-            // flex-flow: column; // 세로로 쌓기
-            // align-items: flex-end;
-
-            // flex-direction: column-reverse; // 세로로 쌓기
-            //
-
             .mockupWrap {
-              // position: absolute;
-              // top: -30vh; // 부모 높이에 상관없이 화면 기준
-              top: auto; // 부모 높이에 상관없이 화면 기준
+              top: auto;
               left: 0;
               transform: translateX(-50%);
             }
 
             .mockup {
-              // width: auto;
-              // height: auto;
               z-index: 0;
             }
 
             .mockup {
-              width: 200px; // 원하는 최대 폭
-              height: auto; // 비율 유지
-              // display: block;
+              width: 200px;
+              height: auto;
             }
 
             .left {
               width: 200px;
-              // height: 450px;
               z-index: 1;
             }
 
             .right {
               width: 200px;
-              // height: 450px;
               margin: 100px 0 0 200px;
-
               z-index: 0;
             }
           }
@@ -391,26 +349,3 @@
     }
   }
 }
-
-/* ---------- VISUAL AREA ---------- */
-
-// .image {
-//   width: 100%;
-//   max-width: 450px;
-//   object-fit: cover;
-//   border-radius: 16px;
-//   box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
-// }
-
-// .slider {
-//         // display: flex;
-//         // gap: 20px;
-//         // flex-wrap: nowrap;
-//         // transform: rotate(-45deg);
-//         // overflow: hidden;
-
-//         .mockup {
-//           // flex-shrink: 0;
-//           // object-fit: cover;
-//         }
-//       }

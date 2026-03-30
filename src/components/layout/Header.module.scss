@@ -17,7 +17,6 @@
   justify-content: space-between; // 로고 ↔ 햄버거
   align-items: center;
   height: 80px;
-  // padding: 0 10px;
 
   // 767px
   @include mix.respond(mobile) {
@@ -27,9 +26,7 @@
 }
 
 .logo {
-  // font-weight: bold;
   letter-spacing: 0.1em;
-  // font-size: 24px;
 }
 
 /* 햄버거 */
