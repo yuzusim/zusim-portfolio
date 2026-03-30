@@ -83,12 +83,12 @@
 
   // ProjectPreview
   .sec03 {
-    height: 100vh;
+    //height: 100vh;
     overflow: hidden;
 
     // 767px
     @include mix.respond(mobile) {
-      height: auto;
+      // height: auto;
     }
   }
 
