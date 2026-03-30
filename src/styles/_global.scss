@@ -1,6 +1,7 @@
 // reset, global style
 @use "./variables" as var;
 @use "styles/mixins" as mix;
+@use "./font";
 
 * {
   margin: 0;
@@ -10,7 +11,7 @@
 
 html,
 body {
-  font-family: "Pretendard";
+  font-family: "noto-sans-kr", sans-serif;
   box-sizing: border-box;
   font-size: 18px;
 }
@@ -58,6 +59,7 @@ textarea {
 
 // 공통
 .title {
+  font-family: "Pretendard";
   font-size: 96px;
   font-weight: bold;
   line-height: 1.5em;
