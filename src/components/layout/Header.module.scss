@@ -101,6 +101,7 @@
   // 767px
   @include mix.respond(mobile) {
     a {
+      padding: 30px 0;
       font-size: 32px;
     }
   }
