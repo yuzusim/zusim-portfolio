@@ -25,7 +25,7 @@
       font-size: 126px;
       font-weight: 700;
       line-height: 1.2;
-      overflow: hidden; // 튀어나오는 글자 숨김
+      overflow: hidden;
     }
 
     .bigTit .line {
@@ -37,29 +37,19 @@
       margin: 100px 0 0;
     }
 
-    // .desc {
-    //   will-change: transform, opacity;
-    // }
-
-    // .desc {
-    //   background: linear-gradient(120deg, #cfcfcf 100%, #000 100%);
-    //   -webkit-background-clip: text;
-    //   -webkit-text-fill-color: transparent;
-    // }
-
     // 767px
     @include mix.respond(mobile) {
       padding: 85px 24px;
 
       .bigTit {
-        font-size: 72px;
+        font-size: 68px;
       }
     }
   }
 
   // AboutPreview
   .sec02 {
-    height: 100vh;
+    // height: 100%;
     background: linear-gradient(
       180deg,
       rgba(255, 255, 255, 0.9),
