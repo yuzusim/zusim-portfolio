@@ -5,7 +5,8 @@
 
 .projectSlider {
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  height: 100dvh;
   color: #fff;
   overflow: hidden;
   //   margin: 100px;
@@ -20,7 +21,7 @@
   .slide {
     position: relative;
     width: 100%;
-    //  height: 100%;
+    height: 100%;
     background-size: cover; // 화면 전체를 꽉 채움
     background-position: center; // 중앙 기준
     background-repeat: no-repeat; // 반복하지 않음
