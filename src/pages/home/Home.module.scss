@@ -39,7 +39,7 @@
 
     // 767px
     @include mix.respond(mobile) {
-      padding: 85px 24px;
+      padding: 85px 32px;
 
       .bigTit {
         font-size: 58px;

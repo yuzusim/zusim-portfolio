@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <header className={`${styles.header}`}>
-      <div className={`${styles.inner} w18`}>
+      <div className={`${styles.inner}`}>
         <Link
           to="/"
           onClick={() => scrollTop("smooth")}
