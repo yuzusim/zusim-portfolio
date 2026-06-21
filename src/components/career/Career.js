@@ -40,7 +40,7 @@ function Career() {
             onClick={() => toggle(index)}
             aria-expanded={openIndex === index}
           >
-            <span className="title">{section.title}</span>
+            <span className="subPageTit">{section.title}</span>
             <span className={styles.icon}>
               {openIndex === index ? "−" : "+"}
             </span>
