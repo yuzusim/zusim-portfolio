@@ -21,7 +21,7 @@ export const workData = [
   {
     id: 1,
     title: "콤스마켓플레이스",
-    sub: "Responsive Web Redesign",
+    sub: "Responsive Redesign",
     category: ["반응형웹", "UI/UX"], // ✅ 배열로 통일
     image: "/images/work/work_1.jpg",
     url: "https://komts.kr/marketplace/",
@@ -30,7 +30,7 @@ export const workData = [
   {
     id: 2,
     title: "(주) 신영기계",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_2.jpg",
     url: "http://www.shinyoungmc.co.kr/",
@@ -39,7 +39,7 @@ export const workData = [
   {
     id: 3,
     title: "(주) 데인스",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_12.jpg",
     url: "http://www.deins-inc.com/",
@@ -47,8 +47,8 @@ export const workData = [
   },
   {
     id: 4,
-    title: "컴팩스알브이코리아 캠핑카",
-    sub: "Responsive Web Redesign",
+    title: "컴팩스알브이코리아",
+    sub: "Responsive Redesign",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_7.jpg",
     url: "http://compaksrv.co.kr/",
@@ -58,7 +58,7 @@ export const workData = [
   {
     id: 5,
     title: "(주) 가야인터내셔널",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_8.jpg",
     url: "http://kayaintl.co.kr/",
@@ -67,7 +67,7 @@ export const workData = [
   {
     id: 6,
     title: "퓨리엘라",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_9.jpg",
     url: "/pages/statusPages/ServiceClosed",
@@ -76,7 +76,7 @@ export const workData = [
   {
     id: 7,
     title: "(주) 빗길친구",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_11.jpg",
     url: "http://www.bk79.kr/",
@@ -94,7 +94,7 @@ export const workData = [
   {
     id: 9,
     title: "다인사주고민상담소",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_13.jpg",
     url: "http://www.the-dain.com/",
@@ -111,8 +111,8 @@ export const workData = [
   },
   {
     id: 11,
-    title: "스타모빌 캠핑카",
-    sub: "Responsive Web Design",
+    title: "스타모빌",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_15.jpg",
     url: "http://www.starmovil.co.kr/",
@@ -121,7 +121,7 @@ export const workData = [
   {
     id: 12,
     title: "명소수산",
-    sub: "Responsive Web Design",
+    sub: "Responsive Design",
     category: ["반응형웹", "UI/UX"],
     image: "/images/work/work_16.jpg",
     url: "/pages/statusPages/ServiceClosed",

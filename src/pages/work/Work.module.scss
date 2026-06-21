@@ -24,7 +24,7 @@
       padding: 100px 32px;
     }
 
-    // 🟢 초록 배경
+    // 초록 배경
     &::after {
       content: "";
       position: absolute;
@@ -78,6 +78,23 @@
       &.active {
         background: #000;
         color: #fff;
+        border-color: #000;
+      }
+    }
+  }
+
+  .tabs {
+    button {
+      // appearance: none;
+      // -webkit-appearance: none;
+
+      color: #000; // 기본 글자색 명시
+      background: #fff;
+      border: 1px solid #ddd;
+
+      &.active {
+        color: #fff;
+        background: #000;
         border-color: #000;
       }
     }
@@ -190,15 +207,15 @@
 
         // 호버시 정보
         .hoverInfo {
-          padding: 20px 18px;
+          padding: 0 15px 30px;
 
           .title {
-            font-size: 24px;
-            margin-bottom: 40px;
+            font-size: 18px;
+            margin-bottom: 20px;
           }
 
           .sub {
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 13px;
           }
 
