@@ -5,7 +5,7 @@ import { skillsPills } from "data/skillsData";
 function MobileSkills() {
   return (
     <div className={`${styles.skillsSection} ${styles.mobileSection}`}>
-      <div className={`${styles.title} title`}>
+      <div className={`${styles.subPageTit} subPageTit`}>
         <p>Skills</p>
         <p>Languages</p>
         <p>Tools</p>

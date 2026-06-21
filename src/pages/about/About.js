@@ -29,7 +29,7 @@ function About() {
         <AnimatedText
           key={isMobile ? "mobile" : "desktop"}
           text={isMobile ? mobileText : desktopText}
-          className={`${styles.title} title`}
+          className={`${styles.subPageTit} subPageTit`}
         />
 
         <ScrollText data={aboutData.intro} />

@@ -4,7 +4,7 @@ export const aboutData = {
     startOffset: 0.85,
     groups: [
       {
-        className: "subTit",
+        className: "subPageTxt",
         lines: [
           "사용자 경험을 바탕으로 UI/UX를 설계하고",
           "인터랙션은 물론 경험의 흐름까지 고민합니다.",
@@ -15,7 +15,7 @@ export const aboutData = {
         charDelay: 0.025,
       },
       {
-        className: "subTit",
+        className: "subPageTxt",
         lines: [
           "디자인과 개발을 연결하며",
           "작은 화면 하나에도 본질이 담기길 바랍니다.",

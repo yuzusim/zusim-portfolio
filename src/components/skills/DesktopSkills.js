@@ -69,7 +69,7 @@ function DesktopSkills() {
 
   return (
     <div className={styles.skillsSection} ref={ref}>
-      <div className={`${styles.title} title`}>
+      <div className={`${styles.subPageTit} subPageTit`}>
         <p>Skills</p>
         <p>Languages</p>
         <p>Tools</p>

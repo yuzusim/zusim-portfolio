@@ -64,7 +64,10 @@ textarea {
 }
 
 // 공통
-.title {
+
+// 타이틀, 서브 페이지 타이틀
+.title,
+.subPageTit {
   font-size: 96px;
   font-weight: bold;
   line-height: 1.5em;
@@ -208,5 +211,9 @@ h6 {
   }
   .subTit {
     font-size: 24px;
+  }
+
+  .subPageTit {
+    font-size: 42px;
   }
 }
