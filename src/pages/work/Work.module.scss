@@ -83,23 +83,6 @@
     }
   }
 
-  .tabs {
-    button {
-      // appearance: none;
-      // -webkit-appearance: none;
-
-      color: #000; // 기본 글자색 명시
-      background: #fff;
-      border: 1px solid #ddd;
-
-      &.active {
-        color: #fff;
-        background: #000;
-        border-color: #000;
-      }
-    }
-  }
-
   // 카드 그리드
   .gridWrap {
     .grid {
@@ -246,6 +229,7 @@
 .mobileFilter {
   position: relative;
   margin-bottom: 24px;
+  color: #000;
 
   // 드롭다운 버튼
   .filterBtn {
@@ -257,6 +241,7 @@
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 40px;
+    color: #000;
 
     // 화살표 오른쪽 정렬 (float 대신 flex)
     display: flex;
