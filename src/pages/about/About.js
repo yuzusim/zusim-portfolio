@@ -16,10 +16,10 @@ function About() {
   const isMobile = useIsMobile(767);
 
   const desktopText =
-    "사용자와 브랜드의 \n‘마음의 중심’을 잇는, \nUX/UI 디자이너, 심유주입니다.";
+    "사용자와 브랜드의 \n‘마음의 중심’을 잇는, \nUI/UX 디자이너, 심유주입니다.";
 
   const mobileText =
-    "사용자와 브랜드의 ‘마음의 중심’을 잇는, UX/UI 디자이너, 심유주입니다.";
+    "사용자와 브랜드의 ‘마음의 중심’을 잇는, UI/UX 디자이너, 심유주입니다.";
 
   return (
     <section className={styles.about}>
