@@ -19,7 +19,7 @@ export const skillsPills = [
     label: "intelliJ",
     color: "#000",
     textColor: "#fff",
-    icon: "icon_intelliJ.png",
+    icon: "icon_intellij.png",
   },
   {
     id: 4,
