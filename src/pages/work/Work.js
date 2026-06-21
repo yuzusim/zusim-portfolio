@@ -56,8 +56,11 @@ function Work() {
   return (
     <section className={styles.work}>
       <div className={styles.workTop}>
-        <AnimatedText text="WORK" className={`${styles.title} title`} />
-        <div className={`${styles.workTit} pt-30`}>
+        <AnimatedText
+          text="WORK"
+          className={`${styles.subPageTit} subPageTit`}
+        />
+        <div className={`${styles.subPageTxt}`}>
           <ScrollText data={workscrollTextData.work} startFromZero />
         </div>
       </div>

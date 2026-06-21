@@ -2,7 +2,7 @@ export const workscrollTextData = {
   work: {
     groups: [
       {
-        className: "subTit",
+        className: "subPageTxt",
         lines: [
           "다양한 프로젝트를 통해 UI/UX의 본질을 탐구하고 가치를 담아 구현했습니다.",
           "해당 프로젝트는 고객사 정보 및 업무 보안을 위해 일부 내용만 공개하고 있습니다.",
