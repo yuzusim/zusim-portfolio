@@ -58,7 +58,7 @@ export const mainProjectData = [
   },
   {
     id: 3,
-    title: "DISNEY",
+    title: "DISNEY +",
     visualType: "disney",
     desc: ["UI/UX", "Responsive Web Redesign"],
     // desc: ["UI/UX", "React 기반 SPA 프로젝트"],
