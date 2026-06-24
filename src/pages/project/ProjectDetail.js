@@ -1,5 +1,3 @@
-import styles from "./ProjectDetail.module.scss";
-
 import { useParams } from "react-router-dom";
 
 import { projectDetailData } from "data/projects";
