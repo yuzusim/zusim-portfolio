@@ -10,7 +10,6 @@ import About from "pages/about/About";
 import Work from "pages/work/Work";
 import ServiceClosed from "pages/statusPages/ServiceClosed";
 import ProjectDetail from "pages/project/ProjectDetail";
-import ProjectDemo from "pages/project/ProjectDemo";
 
 function App() {
   return (
@@ -37,7 +36,7 @@ function App() {
 
           {/* Project */}
           <Route path="/project/:id" element={<ProjectDetail />} />
-          <Route path="/project/:id/demo" element={<ProjectDemo />} />
+          {/* <Route path="/project/:id/demo" element={<ProjectDemo />} /> */}
         </Route>
       </Routes>
     </Router>

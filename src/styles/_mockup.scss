@@ -1,0 +1,302 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+@use "styles/animations" as ani;
+
+// 카드 나열 목업
+.MockupStagger {
+  width: 100%;
+  padding: 100px 60px;
+  overflow: hidden;
+
+  // STACK
+  .stage {
+    display: flex;
+    justify-content: center;
+
+    .stack {
+      position: relative;
+      width: 100%;
+      height: 600px;
+
+      .card {
+        position: absolute;
+        top: 50%;
+        left: 60%;
+
+        margin: 100px auto;
+
+        //transform: translate(-50%, 50%);
+        opacity: 0;
+        filter: blur(8px);
+
+        transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+
+        img {
+          width: 100%;
+          border-radius: 14px;
+          box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      .active {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
+  }
+
+  .textBlock {
+    margin: 100px 100px 0 0;
+
+    p {
+      line-height: 1.8em;
+      margin: 30px 0 0;
+    }
+  }
+}
+
+///////////////////////  Showcase 공통  ///////////////////////
+.ShowcaseInner {
+  position: relative;
+  overflow: hidden;
+
+  .showcaseTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+
+    h2 {
+      color: #fff;
+      font-size: clamp(48px, 5vw, 96px);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+  }
+
+  // grid slider 공통
+  .gridSlider {
+    display: flex;
+    gap: 20px;
+  }
+
+  // 카드 공통
+  .card {
+    flex: 0 0 auto;
+    overflow: hidden;
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: translateY(120px);
+      //box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 5;
+    }
+  }
+
+  // mockup 공통
+  .mockup {
+    width: 100%;
+    display: block;
+  }
+}
+
+/////////////////////////////   PC Showcase  ///////////////////////////
+.pcShowcase {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  .backgroundLayer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .ShowcaseInner {
+    height: 150dvh;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+  }
+
+  .rotateBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .gridSlider {
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 700px;
+    height: 400px;
+  }
+
+  .rowDown {
+    animation: slideDown 25s linear infinite;
+  }
+
+  .rowUp {
+    animation: slideUp 30s linear infinite;
+  }
+}
+
+//////////////////////// Mobile Showcase ////////////////////////////////
+.mobileShowcase {
+  padding: 100px 60px 200px;
+
+  .ShowcaseInner {
+    width: 80%;
+    height: 150dvh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .gridSlider {
+    flex-direction: column;
+    gap: 100px;
+  }
+
+  .card {
+    // width: 100%;
+    width: 350px;
+    border-radius: 20px;
+  }
+
+  .mockup {
+    height: auto;
+    object-fit: initial;
+  }
+
+  // fade gradient
+  .ShowcaseInner::before,
+  .ShowcaseInner::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .ShowcaseInner::before {
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      #fff 0%,
+      rgba(255, 255, 255, 0.85) 30%,
+      rgba(255, 255, 255, 0.35) 70%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .ShowcaseInner::after {
+    bottom: 0;
+    background: linear-gradient(
+      to top,
+      #fff 0%,
+      rgba(255, 255, 255, 0.85) 30%,
+      rgba(255, 255, 255, 0.35) 70%,
+      rgba(255, 255, 255, 0)
+    );
+  }
+
+  .columnUp {
+    animation: columnUp 15s linear infinite;
+  }
+
+  .columnDown {
+    animation: columnDown 15s linear infinite;
+  }
+
+  // .columnUp,
+  // .columnDown {
+  //   will-change: transform;
+  // }
+}
+
+/////////////////////////// Tablet Showcase ///////////////////////////////////
+.tabletShowcase {
+  padding: 200px 0 100px;
+  //height: 100%;
+
+  .ShowcaseInner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 0 auto;
+  }
+
+  .gridSlider {
+    gap: 50px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    border-radius: 40px;
+    isolation: isolate;
+
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 30px 0;
+
+    &:hover {
+      transform: translateY(0);
+    }
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 5px;
+    border-radius: inherit;
+    background: linear-gradient(120deg, #5b5d5e, #d0d0d1, #5b5d5e);
+
+    -webkit-mask:
+      linear-gradient(#d0d0d1 0 0) content-box,
+      linear-gradient(#5b5d5e 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+  }
+
+  .mockup {
+    height: auto;
+    object-fit: initial;
+  }
+
+  .rowDown {
+    animation: slideLeft 5s linear infinite;
+  }
+
+  .rowUp {
+    animation: slideLeft 15s linear infinite;
+  }
+}

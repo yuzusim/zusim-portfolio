@@ -1,0 +1,222 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+@use "styles/animations" as ani;
+
+// Showcase 목업 공통
+.ShowcaseInner {
+  position: relative;
+  //height: 200vh;
+  overflow: hidden;
+  //margin: 0 auto;
+
+  .card {
+    flex: 0 0 auto;
+    // width: 100%;
+    overflow: hidden;
+
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      transform: translateY(120px);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      z-index: 5;
+    }
+  }
+}
+
+// pcShowcase 목업
+.pcShowcase {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  .backgroundLayer {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .ShowcaseInner {
+    position: relative;
+    overflow: hidden;
+    height: 150dvh;
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 20px;
+
+    //padding: 100px 60px 200px;
+
+    .rotateBox {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .gridSlider {
+      display: flex;
+      gap: 20px;
+      white-space: nowrap;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      flex: 0 0 auto;
+      width: 700px;
+      height: 400px;
+      // border-radius: 20px;
+    }
+
+    .mockup {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      //border-radius: 20px;
+    }
+
+    .rowDown {
+      animation: slideDown 25s linear infinite;
+    }
+
+    .rowUp {
+      animation: slideUp 30s linear infinite;
+    }
+  }
+}
+
+// mobileShowcase 목업
+.mobileShowcase {
+  padding: 100px 60px;
+
+  .ShowcaseInner {
+    //position: relative;
+
+    width: 80%;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 0 auto;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 220px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    &::before {
+      top: 0;
+      background: linear-gradient(
+        to bottom,
+        #fff 0%,
+        rgba(255, 255, 255, 0.85) 30%,
+        rgba(255, 255, 255, 0.35) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &::after {
+      bottom: 0;
+      background: linear-gradient(
+        to top,
+        #fff 0%,
+        rgba(255, 255, 255, 0.85) 30%,
+        rgba(255, 255, 255, 0.35) 70%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    .gridSlider {
+      display: flex;
+      gap: 50px;
+      flex-direction: column;
+      // white-space: nowrap;
+      margin-bottom: 50px;
+
+      .card {
+        flex: 0 0 auto;
+        width: 100%;
+
+        overflow: hidden;
+        border-radius: 20px;
+      }
+
+      .mockup {
+        display: block;
+        width: 100%;
+        height: auto; // 중요
+        object-fit: initial;
+      }
+    }
+
+    .columnUp {
+      animation: columnUp 15s linear infinite;
+    }
+
+    .columnDown {
+      animation: columnDown 15s linear infinite;
+    }
+  }
+}
+
+// tabletShowcase 목업
+.tabletShowcase {
+  padding: 100px 0;
+
+  .ShowcaseInner {
+    //width: 100%;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    margin: 0 auto;
+
+    .gridSlider {
+      display: flex;
+      gap: 50px;
+      //flex-direction: column;
+      // white-space: nowrap;
+      margin-bottom: 50px;
+
+      .card {
+        flex: 0 0 auto;
+        width: 650px;
+
+        overflow: hidden;
+        border-radius: 20px;
+      }
+
+      .mockup {
+        display: block;
+        width: 100%;
+        height: auto; // 중요
+        object-fit: initial;
+      }
+    }
+  }
+}

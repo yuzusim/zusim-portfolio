@@ -81,15 +81,6 @@
     }
   }
 
-  // ProjectPreview
-  .sec03 {
-    overflow: hidden;
-
-    // 767px
-    @include mix.respond(mobile) {
-    }
-  }
-
   // WorkPreview
   .sec04 {
     .workInner {

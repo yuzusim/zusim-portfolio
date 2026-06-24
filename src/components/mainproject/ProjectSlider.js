@@ -75,7 +75,14 @@ function ProjectSlider() {
                     </div>
 
                     {/* link 이동 */}
-                    <Link to={project.link} className={styles.linkBtn}>
+                    {/* <Link to={project.link} className={styles.linkBtn}>
+                      MORE
+                    </Link> */}
+
+                    <Link
+                      to={`/project/${project.id}`}
+                      className={styles.linkBtn}
+                    >
                       MORE
                     </Link>
                   </div>
