@@ -1,16 +1,13 @@
 import styles from "../ProjectDetail.module.scss";
+import { getBackgroundStyle } from "utils/getBackgroundStyle";
 
 function Approach({ project }) {
   const { approach } = project;
-  const { background, txt, title, items } = approach;
+  const { txt, title, items } = approach;
+  const { background } = approach;
 
   return (
-    <section
-      className={styles.approach}
-      style={{
-        backgroundImage: `url(${background.value})`,
-      }}
-    >
+    <section className={styles.approach} style={getBackgroundStyle(background)}>
       <div className={styles.overlay} style={{ opacity: background.overlay }} />
 
       <div className={styles.approachInner}>

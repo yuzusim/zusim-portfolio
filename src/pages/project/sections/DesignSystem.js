@@ -46,12 +46,28 @@ function DesignSystem({ project }) {
                       className={styles.colorItem}
                       style={{
                         background: color,
-                        color: color === "#000000" ? "#fff" : "#000",
+
+                        color: ["#000000", "#040714"].includes(color)
+                          ? "#fff"
+                          : "#000",
                       }}
                     >
                       {color}
                     </div>
                   ))}
+
+                  {card.gradient && (
+                    <div
+                      className={styles.colorItem}
+                      style={{
+                        background: card.gradient.background,
+                      }}
+                    >
+                      {card.gradient.colors.map((color) => (
+                        <span key={color}>{color}</span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               );
             }

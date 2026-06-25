@@ -10,19 +10,21 @@ export const benzData = {
     "designSystem",
   ],
 
-  title: "Mercedes-Benz",
+  title: {
+    text: "Mercedes-Benz",
+  },
 
   intro: {
-    mainTxt: "'‘전통 위에 혁신을 더하다’'",
-    subTxt: "Responsive Web Redesign",
+    mainTxt: "‘전통 위에 혁신을 더하다’",
+    subTxt: "Website Renewal Project",
   },
 
   background: {
     type: "image",
     value: "/images/projects/benz/benz_mv_3.jpg",
-    mobilePosition: "center 0% center",
-    mobileSize: "100%",
     overlay: 0.6,
+    // mobilePosition: "0% center",
+    // mobileSize: "100%",
   },
 
   // overview
@@ -219,7 +221,17 @@ export const benzData = {
 
     mobile: {
       showcase: {
-        // rotate: true, // 회전 여부
+        background: {
+          type: "gradient", // image | gradient | color | none
+          value: "linear-gradient(135deg, #000, #be0b0b)",
+
+          // color: "#111827",
+        },
+
+        fade: {
+          enabled: true,
+        },
+
         images: [
           {
             src: "/images/projects/benz/benz_m_mockup_6.jpg",
@@ -326,8 +338,8 @@ export const benzData = {
     cards: [
       {
         type: "font",
-        family: "'Red Rose'",
-        title: "Red Rose",
+        family: "'Roboto Slab'",
+        title: "Roboto Slab",
 
         preview: "Aa",
 
@@ -347,7 +359,11 @@ export const benzData = {
       {
         type: "color",
 
-        colors: ["#FFFFFF", "#D2D2D2", "#000000"],
+        colors: ["#FFFFFF", "#D2D2D2", "#A9A9A9", "#808080", "#000000"],
+        gradient: {
+          background: "linear-gradient(135deg,#56DBAC,#00FFFF)",
+          colors: ["#56DBAC", "#00FFFF"],
+        },
       },
 
       {
@@ -358,7 +374,7 @@ export const benzData = {
           {
             icon: "desktop",
             title: "Desktop",
-            value: "1800px",
+            value: "1920px",
           },
           {
             icon: "mobile",

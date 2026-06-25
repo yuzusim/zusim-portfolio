@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -24,6 +25,19 @@
   @include mix.respond(mobile) {
     background-position: var(--mobile-position);
     background-attachment: scroll;
+  }
+
+  .projectLogo {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 100px;
+    height: auto;
+    object-fit: contain;
+
+    // 767
+    @include mix.respond(mobile) {
+      margin-bottom: 50px;
+    }
   }
 
   .overlay {
@@ -322,6 +336,8 @@
           flex: 1;
           display: flex;
           align-items: flex-start;
+          flex-direction: column;
+
           padding: 30px;
           font-size: 24px;
           font-weight: 400;

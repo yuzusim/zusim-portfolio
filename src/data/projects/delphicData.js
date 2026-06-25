@@ -1,6 +1,5 @@
 export const delphicData = {
   id: 1,
-  title: "DELPHIC",
 
   sections: [
     "intro",
@@ -12,17 +11,21 @@ export const delphicData = {
     "designSystem",
   ],
 
+  title: {
+    text: "DELPHIC",
+  },
+
   intro: {
     mainTxt: "'차의 경계를 넘다'",
-    subTxt: "Responsive Web Redesign",
+    subTxt: "Website Renewal Project",
   },
 
   background: {
     type: "image",
     value: "/images/projects/delphic/del_mv_2.jpg",
-    mobilePosition: "left 0% center",
-    mobileSize: "100%",
     overlay: 0.6,
+    mobilePosition: "left 0% center",
+    // mobileSize: "100%",
   },
 
   // overview
@@ -179,11 +182,6 @@ export const delphicData = {
       },
 
       showcase: {
-        // title: {
-        //   lines: ["당신을 위한", "Mercedes-Benz를 만나보세요."],
-        //   color: "#fff",
-        // },
-
         background: {
           type: "image",
           value: "/images/bg_delphic.jpg",
@@ -222,7 +220,13 @@ export const delphicData = {
 
     mobile: {
       showcase: {
-        // rotate: true, // 회전 여부
+        background: {
+          type: "none", // image | gradient | color | none
+        },
+        fade: {
+          enabled: true,
+        },
+
         images: [
           {
             src: "/images/projects/delphic/del_m_mockup_1.jpg",
