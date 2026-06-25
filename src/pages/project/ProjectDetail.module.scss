@@ -23,6 +23,7 @@
   // 767
   @include mix.respond(mobile) {
     background-position: var(--mobile-position);
+    background-attachment: scroll;
   }
 
   .overlay {
