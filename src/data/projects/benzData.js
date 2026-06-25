@@ -1,15 +1,27 @@
 export const benzData = {
   id: 2,
-  title: "Benz",
+
+  sections: [
+    "intro",
+    "overview",
+    "approach",
+    "pcShowcase",
+    "mobileShowcase",
+    "designSystem",
+  ],
+
+  title: "Mercedes-Benz",
 
   intro: {
-    mainTxt: "'차의 경계를 넘다'",
+    mainTxt: "'‘전통 위에 혁신을 더하다’'",
     subTxt: "Responsive Web Redesign",
   },
 
   background: {
     type: "image",
-    value: "/images/projects/delphic/del_mv_2.jpg",
+    value: "/images/projects/benz/benz_mv_3.jpg",
+    mobilePosition: "center 0% center",
+    mobileSize: "100%",
     overlay: 0.6,
   },
 
@@ -20,10 +32,10 @@ export const benzData = {
       right: "VIEW",
     },
     description: [
-      "델픽(Delphic)은 차와 다도 문화를 기반으로 브랜드 철학과",
-      "라이프 스타일을 제안하는 프리미엄 티 브랜드입니다.",
-      "차, 다도 도구, 공예 작품 등 다양한 콘텐츠를 통해 차 문화를 현대적인 감성으로",
-      "재해석하며 브랜드만의 경험을 전달하고 있습니다.",
+      "메르세데스-벤츠는 130년 이상의 역사를 바탕으로 혁신과 럭셔리를",
+      "선도해 온 글로벌 자동차 브랜드입니다.",
+      "본 프로젝트는 브랜드의 역사와 철학 주요 모델 및 서비스를",
+      "하나의 흐름 속에서 경험할 수 있도록 재구성한 리뉴얼 프로젝트입니다.",
     ],
 
     summary: {
@@ -32,7 +44,7 @@ export const benzData = {
       items: [
         {
           title: "DATE",
-          content: "2025. 06 – 2025. 07",
+          content: "2025. 07 – 2025. 08",
         },
         {
           title: "ROLE",
@@ -48,50 +60,50 @@ export const benzData = {
     story: {
       title: "STRATEGY",
       description:
-        "브랜드 스토리와 차 문화를 효과적으로 전달하기 위해 상품 중심의 정보 구조에서 벗어나 브랜드 경험 중심의 랜딩 페이지를 기획했습니다. Horizontal Flow를 적용하여 콘텐츠가 하나의 흐름처럼 이어지도록 구성하고, 브랜드의 철학과 감성을 자연스럽게 경험할 수 있도록 설계했습니다.",
+        "기존 벤츠 사이트는 정보가 분산되어 있어 브랜드의 헤리티지와 주요 서비스 경험을 통합적으로 전달하기 어려웠습니다. 브랜드의 역사와 가치를 중심으로 주요 모델과 서비스를 자연스럽게 탐색할 수 있도록 콘텐츠 흐름을 재구성하여 프리미엄 브랜드 경험을 강화하고자 했습니다.",
     },
 
-    link: "https://delpic-renewal.vercel.app/",
+    link: "https://benz-renewal.vercel.app/",
   },
 
   // uiux approach
   approach: {
     background: {
       type: "image",
-      value: "/images/projects/delphic/del_mv_1.jpg",
+      value: "/images/projects/benz/benz_mv_5.jpg",
       overlay: 0.6,
     },
 
     txt: "UI/UX DESIGN EXPERIENCE",
-    title: "'차의 경계를 넘다'",
+    title: "‘전통 위에 혁신을 더하다’",
 
     items: [
       {
         number: "01",
-        title: "Brand Experience",
+        title: "Visual Navigation",
         description: [
-          "브랜드의 철학과 차 문화를 중심으로 콘텐츠를 구성하여 사용자가 브랜드의 가치와 무드를 자연스럽게 경험할 수 있도록 했습니다.",
+          "메인 썸네일 선택 시 비주얼 콘텐츠가 즉시 변경되도록 구성하여 사용자가 관심 있는 모델을 능동적으로 탐색할 수 있도록 했습니다.",
         ],
       },
       {
         number: "02",
-        title: "Horizontal Flow",
+        title: "Heritage Storytelling",
         description: [
-          "가로 스크롤 인터랙션을 적용하여 사용자가 브랜드 스토리를 자연스럽게 따라가며 콘텐츠를 하나의 흐름처럼 경험할 수 있도록 했습니다.",
+          "130년 이상의 브랜드 헤리티지를 인터랙티브 타임라인으로 재구성하여 벤츠의 역사와 혁신 과정을 몰입감 있게 전달했습니다.",
         ],
       },
       {
         number: "03",
-        title: "Content Flow",
+        title: "Model Exploration",
         description: [
-          "브랜드 스토리부터 티 문화 그리고 제품까지 콘텐츠가 자연스럽게 연결될 수 있도록 구성하여 사용자가 브랜드 경험을 단계적으로 이해할 수 있도록 설계했습니다.",
+          "탭 기반 인터페이스를 적용해 다양한 모델 정보를 한 화면에서 효율적으로 비교하고 탐색할 수 있도록 구성했습니다.",
         ],
       },
       {
         number: "04",
-        title: "Responsive Structure",
+        title: "Service Engagement",
         description: [
-          "Desktop과 Mobile 환경에 맞춰 콘텐츠 흐름과 정보 구조를 최적화하여 일관된 브랜드 경험을 제공할 수 있도록 했습니다.",
+          "서비스 정보와 멤버십 가입 요소를 연결하여 브랜드 경험이 구매 이후까지 자연스럽게 이어질 수 있도록 했습니다.",
         ],
       },
     ],
@@ -99,101 +111,105 @@ export const benzData = {
 
   mockup: {
     pc: {
-      stagger: {
-        subtitle: "델픽은 동시대 문화와 예술을 지지하고 차 문화를 선도합니다.",
-        sectionTxt: [
-          "차 문화 속에 오랜 시간 자리 잡고 있는 다양한 동서양의 구분이나 다도의 격식과 같은 경계를 넘나들며 장벽을 허물고 누구나 쉽게 즐길 수 있는 차 문화를 이끌고자 합니다. 차를 편안하게 즐기며 개인의 취향과 기호에 맞게 자신만의 차 문화를 완성해 나가는 것을 지향합니다.",
-        ],
-
-        floating: [
-          {
-            id: 1,
-            src: "/images/del_mockup_1.jpg",
-            alt: "Delphic Main Hero Section",
-            className: "skew-left",
-            position: "top-left",
-            delay: 0.2,
-            speed: 1.1,
-          },
-
-          {
-            id: 2,
-            src: "/images/del_mockup_2.jpg",
-            alt: "Brand Story Section",
-            className: "skew-right",
-            position: "top-right",
-            delay: 0.35,
-            speed: 1.2,
-          },
-
-          {
-            id: 3,
-            src: "/images/del_mockup_3.jpg",
-            alt: "Tea Product Grid",
-            className: "skew-left",
-            position: "bottom-left",
-            delay: 0.5,
-            speed: 1.05,
-          },
-
-          {
-            id: 4,
-            src: "/images/del_mockup_4.jpg",
-            alt: "Horizontal Flow Section",
-            className: "skew-right",
-            position: "bottom-right",
-            delay: 0.65,
-            speed: 1.15,
-          },
-          {
-            id: 5,
-            src: "/images/del_mockup_5.jpg",
-            alt: "Horizontal Flow Section",
-            className: "skew-right",
-            position: "bottom-right",
-            delay: 0.65,
-            speed: 1.15,
-          },
-          {
-            id: 6,
-            src: "/images/del_mockup_6.jpg",
-            alt: "Horizontal Flow Section",
-            className: "skew-right",
-            position: "bottom-right",
-            delay: 0.65,
-            speed: 1.15,
-          },
-        ],
-      },
-
       showcase: {
-        // title: ["당신을 위한", "Mercedes-Benz를", "만나보세요"],
+        title: {
+          lines: ["당신을 위한", "Mercedes-Benz를", "만나보세요."],
+          color: "#fff",
+        },
 
-        // title: {
-        //   lines: ["당신을 위한", "Mercedes-Benz를 만나보세요."],
-        //   color: "#fff",
-        // },
+        rotate: {
+          angle: 45,
+        },
 
         background: {
-          type: "image",
-          value: "/images/bg_delphic.jpg",
+          type: "gradient",
+          value: "linear-gradient(135deg, #000, #be0b0b)",
           overlay: 0.6,
 
           images: [
-            { src: "/images/del_mockup_1.jpg", size: "medium", row: 1 },
-            { src: "/images/del_mockup_2.jpg", size: "medium", row: 1 },
-            { src: "/images/del_mockup_3.jpg", size: "medium", row: 1 },
-            { src: "/images/del_mockup_4.jpg", size: "medium", row: 1 },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_1.jpg",
+              size: "medium",
+              row: 1,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_2.jpg",
+              size: "medium",
+              row: 1,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_3.jpg",
+              size: "medium",
+              row: 1,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_4.jpg",
+              size: "medium",
+              row: 1,
+            },
 
-            { src: "/images/del_mockup_4.jpg", size: "medium", row: 2 },
-            { src: "/images/del_mockup_5.jpg", size: "medium", row: 2 },
-            { src: "/images/del_mockup_6.jpg", size: "medium", row: 2 },
-            { src: "/images/del_mockup_1.jpg", size: "medium", row: 2 },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_5.jpg",
+              size: "medium",
+              row: 2,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_6.jpg",
+              size: "medium",
+              row: 2,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_7.jpg",
+              size: "medium",
+              row: 2,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_4.jpg",
+              size: "medium",
+              row: 2,
+            },
 
-            { src: "/images/del_mockup_4.jpg", size: "medium", row: 3 },
-            { src: "/images/del_mockup_2.jpg", size: "medium", row: 3 },
-            { src: "/images/del_mockup_3.jpg", size: "medium", row: 3 },
-            { src: "/images/del_mockup_1.jpg", size: "medium", row: 3 },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_1.jpg",
+              size: "medium",
+              row: 3,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_2.jpg",
+              size: "medium",
+              row: 3,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_3.jpg",
+              size: "medium",
+              row: 3,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_4.jpg",
+              size: "medium",
+              row: 3,
+            },
+
+            {
+              src: "/images/projects/benz/benz_pc_mockup_5.jpg",
+              size: "medium",
+              row: 4,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_6.jpg",
+              size: "medium",
+              row: 4,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_7.jpg",
+              size: "medium",
+              row: 4,
+            },
+            {
+              src: "/images/projects/benz/benz_pc_mockup_4.jpg",
+              size: "medium",
+              row: 4,
+            },
           ],
         },
       },
@@ -206,49 +222,49 @@ export const benzData = {
         // rotate: true, // 회전 여부
         images: [
           {
-            src: "/images/projects/delphic/del_m_mockup_1.jpg",
+            src: "/images/projects/benz/benz_m_mockup_6.jpg",
             size: "medium",
             column: 1,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_4.jpg",
+            src: "/images/projects/benz/benz_m_mockup_2.jpg",
             size: "medium",
             column: 1,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_8.jpg",
+            src: "/images/projects/benz/benz_m_mockup_8.jpg",
             size: "medium",
             column: 1,
           },
 
           {
-            src: "/images/projects/delphic/del_m_mockup_7.jpg",
+            src: "/images/projects/benz/benz_m_mockup_10.jpg",
             size: "medium",
             column: 2,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_2.jpg",
+            src: "/images/projects/benz/benz_m_mockup_1.jpg",
             size: "medium",
             column: 2,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_5.jpg",
+            src: "/images/projects/benz/benz_m_mockup_9.jpg",
             size: "medium",
             column: 2,
           },
 
           {
-            src: "/images/projects/delphic/del_m_mockup_3.jpg",
+            src: "/images/projects/benz/benz_m_mockup_3.jpg",
             size: "medium",
             column: 3,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_6.jpg",
+            src: "/images/projects/benz/benz_m_mockup_5.jpg",
             size: "medium",
             column: 3,
           },
           {
-            src: "/images/projects/delphic/del_m_mockup_4.jpg",
+            src: "/images/projects/benz/benz_m_mockup_7.jpg",
             size: "medium",
             column: 3,
           },

@@ -2,6 +2,16 @@ export const delphicData = {
   id: 1,
   title: "DELPHIC",
 
+  sections: [
+    "intro",
+    "overview",
+    "approach",
+    "mobileShowcase",
+    "pcShowcase",
+    "tabletShowcase",
+    "designSystem",
+  ],
+
   intro: {
     mainTxt: "'차의 경계를 넘다'",
     subTxt: "Responsive Web Redesign",
@@ -169,8 +179,6 @@ export const delphicData = {
       },
 
       showcase: {
-        // title: ["당신을 위한", "Mercedes-Benz를", "만나보세요"],
-
         // title: {
         //   lines: ["당신을 위한", "Mercedes-Benz를 만나보세요."],
         //   color: "#fff",
@@ -202,6 +210,10 @@ export const delphicData = {
             { src: "/images/del_mockup_6.jpg", size: "medium", row: 4 },
             { src: "/images/del_mockup_1.jpg", size: "medium", row: 4 },
           ],
+        },
+
+        rotate: {
+          angle: -45,
         },
       },
 

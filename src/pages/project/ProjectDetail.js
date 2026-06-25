@@ -6,11 +6,12 @@ import { useScrollTop } from "hooks/useScrollTop ";
 import Intro from "./sections/Intro";
 import Overview from "./sections/Overview";
 import Approach from "./sections/Approach";
+import DesignSystem from "./sections/DesignSystem";
+
 import PcStagger from "./mockup/pc/Stagger";
 import MobileShowcase from "./mockup/mobile/Showcase";
 import PcShowcase from "./mockup/pc/Showcase";
 import TabletShowcase from "./mockup/tablet/Showcase";
-import DesignSystem from "./sections/DesignSystem";
 
 function ProjectDetail() {
   // 스크롤 최상단
@@ -22,16 +23,22 @@ function ProjectDetail() {
 
   if (!project) return <div>Not Found</div>;
 
+  const sectionComponents = {
+    intro: <Intro project={project} />,
+    overview: <Overview project={project} />,
+    approach: <Approach project={project} />,
+    pcStagger: <PcStagger project={project} />,
+    mobileShowcase: <MobileShowcase project={project} />,
+    pcShowcase: <PcShowcase project={project} />,
+    tabletShowcase: <TabletShowcase project={project} />,
+    designSystem: <DesignSystem project={project} />,
+  };
+
   return (
     <div id="projectDetail">
-      <Intro project={project} />
-      <Overview project={project} />
-      <Approach project={project} />
-      <PcStagger project={project} />
-      <MobileShowcase project={project} />
-      <PcShowcase project={project} />
-      <TabletShowcase project={project} />
-      <DesignSystem project={project} />
+      {project.sections.map((section) => (
+        <div key={section}>{sectionComponents[section]}</div>
+      ))}
     </div>
   );
 }

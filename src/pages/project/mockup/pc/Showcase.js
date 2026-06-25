@@ -5,42 +5,62 @@ function Showcase({ project }) {
 
   if (!showcase) return null;
 
-  const bg = showcase?.background?.value;
-  const overlay = showcase?.background?.overlay ?? 0;
-  const images = showcase?.background?.images || [];
+  const { title, background = {} } = showcase;
+
+  const { type, value, overlay = 0, images = [] } = background;
+  const angle = project?.mockup?.pc?.showcase?.rotate?.angle ?? -45;
+  //const angle = project?.mockup?.pc?.showcase?.rotate?.angle ?? 0;
 
   return (
     <section className={`${styles.pcShowcase}`}>
-      {/* background layer */}
-      <div
-        className={styles.backgroundLayer}
-        style={{ backgroundImage: `url(${bg})` }}
-      >
+      {/* =========================
+          BACKGROUND LAYER
+      ========================= */}
+      <div className={`${styles.backgroundLayer}`}>
+        {/* IMAGE */}
+        {type === "image" && (
+          <div
+            className={styles.bgImage}
+            style={{ backgroundImage: `url(${value})` }}
+          />
+        )}
+
+        {/* COLOR */}
+        {type === "color" && (
+          <div className={styles.bgColor} style={{ background: value }} />
+        )}
+
+        {/* GRADIENT */}
+        {type === "gradient" && (
+          <div className={styles.bgGradient} style={{ background: value }} />
+        )}
+
+        {/* OVERLAY (공통) */}
         <div className={styles.overlay} style={{ opacity: overlay }} />
       </div>
 
-      {/* foreground content */}
+      {/* =========================
+          FOREGROUND CONTENT
+      ========================= */}
       <div className={`${styles.ShowcaseInner} ${styles.delphicVisual}`}>
-        {/* {showcase.title?.length > 0 && (
-          <div className={styles.showcaseTitle}>
-            {showcase.title.map((text, idx) => (
-              <h2 key={idx}>{text}</h2>
-            ))}
-          </div>
-        )} */}
-
-        {showcase.title && (
-          <div
-            className={styles.showcaseTitle}
-            style={{ color: showcase.title.color }}
-          >
-            {showcase.title.lines.map((line, i) => (
+        {/* TITLE */}
+        {title && (
+          <div className={styles.showcaseTitle} style={{ color: title.color }}>
+            {title.lines.map((line, i) => (
               <h2 key={i}>{line}</h2>
             ))}
           </div>
         )}
 
-        <div className={`${styles.rotateBox}`}>
+        {/* =========================
+            MOCKUP GRID ANIMATION
+        ========================= */}
+        <div
+          className={styles.rotateBox}
+          style={{
+            transform: `translate(-50%, -50%) rotate(${angle}deg)`,
+          }}
+        >
           {[1, 2, 3, 4].map((row) => (
             <div
               key={row}

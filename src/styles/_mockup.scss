@@ -145,6 +145,19 @@
   .backgroundLayer {
     position: absolute;
     inset: 0;
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+  }
+
+  .bgImage,
+  .bgColor,
+  .bgGradient {
+    position: absolute;
+    inset: 0;
+  }
+
+  .bgImage {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,7 +182,6 @@
     left: 50%;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, -50%) rotate(-45deg);
   }
 
   .gridSlider {
@@ -178,7 +190,7 @@
 
   .card {
     width: 700px;
-    height: 400px;
+    height: auto;
   }
 
   .rowDown {

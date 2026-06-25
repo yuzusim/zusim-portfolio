@@ -209,6 +209,7 @@
   @include mix.respond(mobile) {
     height: auto;
     padding: 100px 32px;
+    background-attachment: scroll;
 
     .approachInner {
       .approachTxtTop {
