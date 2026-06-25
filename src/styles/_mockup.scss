@@ -285,17 +285,12 @@
   //   will-change: transform;
   // }
 
-  //
   @include mix.respond(mobile) {
     padding: 100px 32px;
 
     .ShowcaseInner {
       width: 100%;
       height: 100dvh;
-      // margin: 0 auto;
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
-      // gap: 30px;
     }
 
     .gridSlider {

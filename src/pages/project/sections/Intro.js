@@ -4,20 +4,11 @@ function Intro({ project }) {
   const { background, intro, title } = project;
 
   return (
-    // <section
-    //   className={styles.pjIntro}
-    //   style={{
-    //     backgroundImage: `url(${background.value})`,
-    //     "--mobile-position": background.mobilePosition || "center",
-    //   }}
-    // >
-
     <section
       className={styles.pjIntro}
       style={{
         backgroundImage: `url(${background.value})`,
         "--mobile-position": background.mobilePosition || "center",
-        "--mobile-size": background.mobileSize || "cover",
       }}
     >
       <div className={styles.overlay} style={{ opacity: background.overlay }} />

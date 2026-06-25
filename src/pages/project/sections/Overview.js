@@ -18,7 +18,7 @@ function Overview({ project }) {
 
           <div className={`${styles.description} pjSubTxt`}>
             {overview.description.map((text, index) => (
-              <p key={index}>{text}</p>
+              <span key={index}>{text} </span>
             ))}
           </div>
         </div>

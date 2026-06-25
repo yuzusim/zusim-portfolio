@@ -73,7 +73,8 @@ textarea {
   font-weight: bold;
   line-height: 1.5em;
 }
-.pjSubTit {
+.pjSubTit,
+.pjSubTxt {
   font-size: 36px;
   line-height: 1.5em;
 }
@@ -97,6 +98,24 @@ textarea {
 .text {
   font-size: 24px;
   line-height: 1.5em;
+}
+
+// 767px
+@include mix.respond(mobile) {
+  .subTxt,
+  .subTit,
+  .pjSubTxt {
+    font-size: 24px;
+  }
+
+  .pjTxt {
+    font-size: 18px;
+  }
+
+  .title,
+  .subPageTit {
+    font-size: 42px;
+  }
 }
 
 // weight
@@ -210,27 +229,4 @@ h6 {
 }
 
 #root {
-}
-
-// 767px
-@include mix.respond(mobile) {
-  // .title {
-  //   font-size: 58px;
-  // }
-  .subTxt,
-  .pjSubTxt {
-    font-size: 24px;
-  }
-  .subTit {
-    font-size: 24px;
-  }
-
-  .pjTxt {
-    font-size: 18px;
-  }
-
-  .title,
-  .subPageTit {
-    font-size: 42px;
-  }
 }
