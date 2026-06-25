@@ -48,6 +48,12 @@
   // 767
   @include mix.respond(mobile) {
     background-position: var(--mobile-position);
+    background-size: var(--mobile-size);
+
+    //     @include mix.respond(mobile) {
+    //   background-position: var(--mobile-position, center);
+    //   background-size: var(--mobile-size, cover);
+    // }
   }
 }
 

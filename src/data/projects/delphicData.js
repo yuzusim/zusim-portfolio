@@ -10,7 +10,8 @@ export const delphicData = {
   background: {
     type: "image",
     value: "/images/projects/delphic/del_mv_2.jpg",
-    mobilePosition: "0% center",
+    mobilePosition: "left 0% center",
+    mobileSize: "100%",
     overlay: 0.6,
   },
 
