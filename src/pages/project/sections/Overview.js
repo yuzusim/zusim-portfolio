@@ -31,7 +31,7 @@ function Overview({ project }) {
             </h3>
             <ul className={styles.summaryList}>
               {overview.summary.items.map((item) => (
-                <li key={item.title} className={`${styles.summaryItem} text`}>
+                <li key={item.title} className={`${styles.summaryItem} pjTxt`}>
                   <span>{item.title}</span>
 
                   <div className={styles.content}>
@@ -53,7 +53,7 @@ function Overview({ project }) {
             <h3 className={`${styles.summaryTitle} pjSubTxt`}>
               {overview.story.title}
             </h3>
-            <p className={`${styles.storyTxt} text mb-30`}>
+            <p className={`${styles.storyTxt} pjTxt`}>
               {overview.story.description}
             </p>
             {/* link 이동 */}

@@ -8,7 +8,7 @@
 .pjIntro {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 
   display: flex;
   justify-content: center;
@@ -32,6 +32,7 @@
     text-align: center;
     color: rgba(255, 255, 255, 0.8);
     z-index: 2;
+    margin: 0 32px;
 
     .subPageTit {
       margin: 0 0 100px;
@@ -39,9 +40,14 @@
 
     .subTxt {
       font-weight: 400;
-      font-size: 38px;
+      // font-size: 38px;
       line-height: 1.5em;
     }
+  }
+
+  // 767
+  @include mix.respond(mobile) {
+    background-position: var(--mobile-position);
   }
 }
 
@@ -77,7 +83,6 @@
 
     .summaryTitle {
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-      //margin: 30px 0 30px;
       padding: 20px 0;
     }
 
@@ -105,6 +110,23 @@
       p {
         line-height: 2em;
         margin: 30px 0 50px;
+      }
+    }
+  }
+
+  // 767
+  @include mix.respond(mobile) {
+    padding: 100px 32px;
+
+    .overviewContent {
+      grid-template-columns: 1fr;
+
+      .summaryTitle {
+        padding: 40px 0 30px;
+      }
+
+      .summaryList {
+        gap: 10px;
       }
     }
   }
@@ -148,6 +170,7 @@
       .approachItem {
         font-weight: 700;
         margin: 100px 0 0;
+
         .number {
           font-size: 24px;
         }
@@ -165,14 +188,53 @@
       }
     }
   }
+
+  // 767
+  @include mix.respond(mobile) {
+    height: auto;
+    padding: 100px 32px;
+
+    .approachInner {
+      .approachTxtTop {
+        .approachTxt {
+          margin: 0 0 20px;
+        }
+
+        h2 {
+          margin-bottom: 20px;
+        }
+      }
+      .approachList {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+
+        .approachItem {
+          margin: 30px 0 0;
+
+          .number {
+            font-size: 18px;
+          }
+
+          .itemTitle {
+            font-size: 24px;
+            margin: 20px 0 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // 디자인 시스템
 .designSystem {
   padding: 100px 60px 200px;
 
+  // 767
+  @include mix.respond(mobile) {
+    padding: 100px 32px 150px;
+  }
+
   .designSystemInner {
-    // max-width: 1800px;
     margin: 0 auto;
 
     // 시스템 카드 리스트
@@ -182,6 +244,12 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 30px;
+
+      // 767
+      @include mix.respond(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+      }
 
       // 카드
       .designCard {
@@ -218,6 +286,13 @@
         p {
           font-size: 24px;
           color: #666;
+        }
+
+        // 767
+        @include mix.respond(mobile) {
+          .fontPreview {
+            font-size: 58px;
+          }
         }
       }
 
@@ -280,5 +355,9 @@
         }
       }
     }
+  }
+
+  // 767
+  @include mix.respond(mobile) {
   }
 }

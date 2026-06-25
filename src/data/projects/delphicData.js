@@ -10,6 +10,7 @@ export const delphicData = {
   background: {
     type: "image",
     value: "/images/projects/delphic/del_mv_2.jpg",
+    mobilePosition: "0% center",
     overlay: 0.6,
   },
 
@@ -190,10 +191,15 @@ export const delphicData = {
             { src: "/images/del_mockup_6.jpg", size: "medium", row: 2 },
             { src: "/images/del_mockup_1.jpg", size: "medium", row: 2 },
 
-            { src: "/images/del_mockup_4.jpg", size: "medium", row: 3 },
+            { src: "/images/del_mockup_6.jpg", size: "medium", row: 3 },
             { src: "/images/del_mockup_2.jpg", size: "medium", row: 3 },
             { src: "/images/del_mockup_3.jpg", size: "medium", row: 3 },
             { src: "/images/del_mockup_1.jpg", size: "medium", row: 3 },
+
+            { src: "/images/del_mockup_3.jpg", size: "medium", row: 4 },
+            { src: "/images/del_mockup_5.jpg", size: "medium", row: 4 },
+            { src: "/images/del_mockup_6.jpg", size: "medium", row: 4 },
+            { src: "/images/del_mockup_1.jpg", size: "medium", row: 4 },
           ],
         },
       },

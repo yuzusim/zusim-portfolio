@@ -41,7 +41,7 @@ function Showcase({ project }) {
         )}
 
         <div className={`${styles.rotateBox}`}>
-          {[1, 2, 3].map((row) => (
+          {[1, 2, 3, 4].map((row) => (
             <div
               key={row}
               className={`${styles.gridSlider} ${

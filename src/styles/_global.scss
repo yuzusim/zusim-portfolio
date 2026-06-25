@@ -73,9 +73,13 @@ textarea {
   font-weight: bold;
   line-height: 1.5em;
 }
-
-.pjSubTxt {
+.pjSubTit {
   font-size: 36px;
+  line-height: 1.5em;
+}
+
+.pjTxt {
+  font-size: 24px;
   line-height: 1.5em;
 }
 
@@ -213,11 +217,16 @@ h6 {
   // .title {
   //   font-size: 58px;
   // }
-  .subTxt {
+  .subTxt,
+  .pjSubTxt {
     font-size: 24px;
   }
   .subTit {
     font-size: 24px;
+  }
+
+  .pjTxt {
+    font-size: 18px;
   }
 
   .title,

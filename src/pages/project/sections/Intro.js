@@ -8,6 +8,7 @@ function Intro({ project }) {
       className={styles.pjIntro}
       style={{
         backgroundImage: `url(${background.value})`,
+        "--mobile-position": background.mobilePosition || "center",
       }}
     >
       <div className={styles.overlay} style={{ opacity: background.overlay }} />
