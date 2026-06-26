@@ -81,7 +81,6 @@
 .ShowcaseInner {
   position: relative;
   overflow: hidden;
-  isolation: isolate;
 
   .showcaseTitle {
     position: absolute;
@@ -129,10 +128,6 @@
   .mockup {
     width: 100%;
     display: block;
-    height: auto;
-
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
   }
 
   //
@@ -229,7 +224,6 @@
 //////////////////////// Mobile Showcase ////////////////////////////////
 .mobileShowcase {
   padding: 100px 60px 200px;
-  position: relative;
 
   .ShowcaseInner {
     width: 80%;
@@ -259,34 +253,12 @@
   .gridSlider {
     flex-direction: column;
     gap: 100px;
-
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-
-    contain: paint;
   }
 
   .card {
     // width: 100%;
     width: 350px;
     border-radius: 20px;
-
-    &:hover {
-      transform: none;
-      //box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-      // z-index: 5;
-    }
-
-    overflow: hidden;
-
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
   }
 
   .mockup {
@@ -314,10 +286,10 @@
     animation: columnDown 15s linear infinite;
   }
 
-  .columnUp,
-  .columnDown {
-    will-change: transform;
-  }
+  // .columnUp,
+  // .columnDown {
+  //   will-change: transform;
+  // }
 
   @include mix.respond(mobile) {
     padding: 100px 32px;
