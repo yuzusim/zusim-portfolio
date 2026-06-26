@@ -164,23 +164,41 @@
 // }
 
 // 모바일 목업
+// @keyframes columnUp {
+//   from {
+//     transform: translateY(0);
+//   }
+
+//   to {
+//     transform: translateY(-50%);
+//   }
+// }
+
+// @keyframes columnDown {
+//   from {
+//     transform: translateY(-50%);
+//   }
+
+//   to {
+//     transform: translateY(0);
+//   }
+// }
+
 @keyframes columnUp {
   from {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
-
   to {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
 }
 
 @keyframes columnDown {
   from {
-    transform: translateY(-50%);
+    transform: translate3d(0, -50%, 0);
   }
-
   to {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
