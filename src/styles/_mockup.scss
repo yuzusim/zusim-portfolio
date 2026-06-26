@@ -80,7 +80,8 @@
 ///////////////////////  Showcase 공통  ///////////////////////
 .ShowcaseInner {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
+  overflow: visible;
 
   isolation: isolate;
   transform: translateZ(0);
