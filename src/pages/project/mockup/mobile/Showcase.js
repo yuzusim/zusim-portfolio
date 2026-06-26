@@ -37,6 +37,9 @@ function Showcase({ project }) {
                     src={img.src}
                     className={`${styles.mockup} ${styles[img.size]}`}
                     alt=""
+                    loading="eager"
+                    decoding="sync"
+                    fetchPriority="high"
                   />
                 </div>
               ))}
