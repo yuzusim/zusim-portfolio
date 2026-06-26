@@ -91,13 +91,15 @@
 
     width: 100%;
     text-align: center;
-    pointer-events: none;
+
+    // pointer-events: none;
 
     h2 {
       color: #fff;
-      font-size: clamp(48px, 5vw, 96px);
+      font-size: clamp(42px, 4vw, 96px);
       font-weight: 700;
-      line-height: 1.2;
+      line-height: 1.5em;
+      margin: 0 32px;
     }
   }
 
@@ -132,6 +134,9 @@
 
   //
   @include mix.respond(mobile) {
+    .showcaseTitle {
+      word-break: keep-all;
+    }
   }
 }
 

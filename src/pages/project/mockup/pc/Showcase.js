@@ -1,15 +1,16 @@
 import styles from "../../ProjectDetail.module.scss";
+import ScrollText from "components/scrolltext/ScrollText";
 
 function Showcase({ project }) {
   const showcase = project?.mockup?.pc?.showcase;
-
-  if (!showcase) return null;
 
   const { title, background = {} } = showcase;
 
   const { type, value, overlay = 0, images = [] } = background;
   const angle = project?.mockup?.pc?.showcase?.rotate?.angle ?? -45;
   //const angle = project?.mockup?.pc?.showcase?.rotate?.angle ?? 0;
+
+  if (!showcase) return null;
 
   return (
     <section className={`${styles.pcShowcase}`}>
