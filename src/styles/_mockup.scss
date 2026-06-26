@@ -118,7 +118,7 @@
     box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
 
     &:hover {
-      transform: translateY(120px);
+      transform: translateY(20px);
       //box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
       z-index: 5;
     }
@@ -218,98 +218,8 @@
 }
 
 //////////////////////// Mobile Showcase ////////////////////////////////
-// .mobileShowcase {
-//   padding: 100px 60px 200px;
-
-//   .ShowcaseInner {
-//     width: 80%;
-//     height: 150dvh;
-//     margin: 0 auto;
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     gap: 30px;
-
-//     -webkit-mask-image: linear-gradient(
-//       to bottom,
-//       transparent,
-//       black 8%,
-//       black 92%,
-//       transparent
-//     );
-
-//     mask-image: linear-gradient(
-//       to bottom,
-//       transparent,
-//       black 8%,
-//       black 92%,
-//       transparent
-//     );
-//   }
-
-//   .gridSlider {
-//     flex-direction: column;
-//     gap: 100px;
-//   }
-
-//   .card {
-//     // width: 100%;
-//     width: 350px;
-//     border-radius: 20px;
-//   }
-
-//   .mockup {
-//     height: auto;
-//     object-fit: initial;
-//   }
-
-//   // fade gradient
-//   .ShowcaseInner::before,
-//   .ShowcaseInner::after {
-//     content: "";
-//     position: absolute;
-//     left: 0;
-//     width: 100%;
-//     height: 50px;
-//     z-index: 10;
-//     pointer-events: none;
-//   }
-
-//   .columnUp {
-//     animation: columnUp 15s linear infinite;
-//   }
-
-//   .columnDown {
-//     animation: columnDown 15s linear infinite;
-//   }
-
-//   // .columnUp,
-//   // .columnDown {
-//   //   will-change: transform;
-//   // }
-
-//   @include mix.respond(mobile) {
-//     padding: 100px 32px;
-
-//     .ShowcaseInner {
-//       width: 100%;
-//       height: 100dvh;
-//     }
-
-//     .gridSlider {
-//       flex-direction: column;
-//       gap: 50px;
-//     }
-
-//     .card {
-//       width: 100%;
-//       //width: 350px;
-//       border-radius: 10px;
-//     }
-//   }
-// }
-
 .mobileShowcase {
-  padding: 100px 60px 200px;
+  padding: 100px 60px;
 
   .ShowcaseInner {
     width: 80%;
@@ -339,37 +249,19 @@
   .gridSlider {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 80px;
 
     will-change: transform;
     transform: translateZ(0);
   }
 
-  /* 🔥 Safari 안정 핵심 */
+  // Safari 안정 핵심
   .columnUp {
-    animation: scrollUp 18s linear infinite;
+    animation: columnUp 18s linear infinite;
   }
 
   .columnDown {
-    animation: scrollDown 18s linear infinite;
-  }
-
-  @keyframes scrollUp {
-    from {
-      transform: translate3d(0, 0, 0);
-    }
-    to {
-      transform: translate3d(0, var(--move), 0);
-    }
-  }
-
-  @keyframes scrollDown {
-    from {
-      transform: translate3d(0, var(--move), 0);
-    }
-    to {
-      transform: translate3d(0, 0, 0);
-    }
+    animation: columnDown 18s linear infinite;
   }
 
   .card {
@@ -392,6 +284,10 @@
     .ShowcaseInner {
       width: 100%;
       height: 100dvh;
+    }
+
+    .gridSlider {
+      gap: 30px;
     }
 
     .card {
