@@ -282,10 +282,10 @@
     animation: columnDown 15s linear infinite;
   }
 
-  // .columnUp,
-  // .columnDown {
-  //   will-change: transform;
-  // }
+  .columnUp,
+  .columnDown {
+    will-change: transform;
+  }
 
   @include mix.respond(mobile) {
     padding: 100px 32px;
