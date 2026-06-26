@@ -184,21 +184,41 @@
 //   }
 // }
 
+// @keyframes columnUp {
+//   from {
+//     transform: translate3d(0, 0, 0);
+//   }
+//   to {
+//     transform: translate3d(0, -50%, 0);
+//   }
+// }
+
+// @keyframes columnDown {
+//   from {
+//     transform: translate3d(0, -50%, 0);
+//   }
+//   to {
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+
 @keyframes columnUp {
   from {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
+
   to {
-    transform: translate3d(0, -50%, 0);
+    transform: translateY(calc(-50% - 50px));
   }
 }
 
 @keyframes columnDown {
   from {
-    transform: translate3d(0, -50%, 0);
+    transform: translateY(calc(-50% - 50px));
   }
+
   to {
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
   }
 }
 
