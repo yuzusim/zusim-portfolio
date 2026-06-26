@@ -291,6 +291,10 @@
     // width: 100%;
     width: 350px;
     border-radius: 20px;
+
+    &:hover {
+      transform: none;
+    }
   }
 
   .mockup {
