@@ -1,31 +1,14 @@
-import { useEffect, useState } from "react";
 import styles from "../../ProjectDetail.module.scss";
 import { getBackgroundStyle } from "utils/getBackgroundStyle";
 
 function Showcase({ project }) {
-  //   const [start, setStart] = useState(false);
-
-  // useEffect(() => {
-  //   requestAnimationFrame(() => {
-  //     setStart(true);
-  //   });
-  // }, []);
-
   const showcase = project?.mockup?.mobile?.showcase;
-
   console.log("Showcase 렌더링");
 
-  const [startAnimation, setStartAnimation] = useState(false);
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      setStartAnimation(true);
-    });
-  }, []);
+  if (!showcase) return null;
 
   const { images = [], background, fade } = showcase;
 
-  if (!showcase) return null;
   return (
     <section
       className={styles.mobileShowcase}
@@ -39,20 +22,10 @@ function Showcase({ project }) {
         }}
       >
         {[1, 2, 3].map((column) => (
-          // <div
-          //   key={column}
-          //   className={`${styles.gridSlider} ${
-          //     column % 2 ? styles.columnUp : styles.columnDown
-          //   }`}
-          // >
-
           <div
+            key={column}
             className={`${styles.gridSlider} ${
-              startAnimation
-                ? column % 2
-                  ? styles.columnUp
-                  : styles.columnDown
-                : ""
+              column % 2 ? styles.columnUp : styles.columnDown
             }`}
           >
             {images
@@ -64,8 +37,6 @@ function Showcase({ project }) {
                     src={img.src}
                     className={`${styles.mockup} ${styles[img.size]}`}
                     alt=""
-                    loading="eager"
-                    decoding="sync"
                   />
                 </div>
               ))}

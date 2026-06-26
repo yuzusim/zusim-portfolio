@@ -80,14 +80,7 @@
 ///////////////////////  Showcase 공통  ///////////////////////
 .ShowcaseInner {
   position: relative;
-  //overflow: hidden;
-  overflow: visible;
-
-  isolation: isolate;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  overflow: hidden;
 
   .showcaseTitle {
     position: absolute;
@@ -112,10 +105,6 @@
   .gridSlider {
     display: flex;
     gap: 20px;
-
-    will-change: transform;
-    transform: translateZ(0);
-    backface-visibility: hidden;
   }
 
   // 카드 공통
@@ -225,10 +214,6 @@
       width: 300px;
       height: auto;
     }
-
-    .gridSlider {
-      //margin-bottom: -10px;
-    }
   }
 }
 
@@ -238,12 +223,11 @@
 
   .ShowcaseInner {
     width: 80%;
-    height: 150vh;
+    height: 150dvh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    align-items: start;
 
     -webkit-mask-image: linear-gradient(
       to bottom,
@@ -260,28 +244,6 @@
       black 92%,
       transparent
     );
-
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 80px;
-    //   z-index: 10;
-    //   background: linear-gradient(to bottom, var(--fade-color), transparent);
-    // }
-
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-    //   bottom: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 80px;
-    //   z-index: 10;
-    //   background: linear-gradient(to top, var(--fade-color), transparent);
-    // }
   }
 
   .gridSlider {
@@ -293,10 +255,6 @@
     // width: 100%;
     width: 350px;
     border-radius: 20px;
-
-    &:hover {
-      transform: none;
-    }
   }
 
   .mockup {
@@ -334,7 +292,7 @@
 
     .ShowcaseInner {
       width: 100%;
-      height: 100vh;
+      height: 100dvh;
     }
 
     .gridSlider {
