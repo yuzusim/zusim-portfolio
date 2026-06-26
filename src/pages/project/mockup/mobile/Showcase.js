@@ -1,14 +1,31 @@
+import { useEffect, useState } from "react";
 import styles from "../../ProjectDetail.module.scss";
 import { getBackgroundStyle } from "utils/getBackgroundStyle";
 
 function Showcase({ project }) {
+  //   const [start, setStart] = useState(false);
+
+  // useEffect(() => {
+  //   requestAnimationFrame(() => {
+  //     setStart(true);
+  //   });
+  // }, []);
+
   const showcase = project?.mockup?.mobile?.showcase;
+
   console.log("Showcase 렌더링");
 
-  if (!showcase) return null;
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setStartAnimation(true);
+    });
+  }, []);
 
   const { images = [], background, fade } = showcase;
 
+  if (!showcase) return null;
   return (
     <section
       className={styles.mobileShowcase}
@@ -22,10 +39,20 @@ function Showcase({ project }) {
         }}
       >
         {[1, 2, 3].map((column) => (
+          // <div
+          //   key={column}
+          //   className={`${styles.gridSlider} ${
+          //     column % 2 ? styles.columnUp : styles.columnDown
+          //   }`}
+          // >
+
           <div
-            key={column}
             className={`${styles.gridSlider} ${
-              column % 2 ? styles.columnUp : styles.columnDown
+              startAnimation
+                ? column % 2
+                  ? styles.columnUp
+                  : styles.columnDown
+                : ""
             }`}
           >
             {images
