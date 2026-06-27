@@ -98,21 +98,14 @@
     }
 
     .description {
-      //text-align: center;
-      // margin: 50px 0 100px;
-
-      // span {
-      //   display: block;
-      // }
+      margin: 0 0 50px;
     }
 
     // 767
     @include mix.respond(mobile) {
-      // .description {
-      //   span {
-      //     display: inline;
-      //   }
-      // }
+      .overviewTop {
+        flex-direction: column;
+      }
     }
   }
 
@@ -120,7 +113,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     //gap: 40px;
-    padding: 20px 0;
 
     .summaryTitle {
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);

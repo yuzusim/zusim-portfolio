@@ -20,15 +20,22 @@ function Overview({ project }) {
 
           {/* ScrollText */}
           <div className={`${styles.overviewTop} subPageTit`}>
-            <ScrollText data={{ groups: [{ lines: ["OVER"] }] }} />
+            <ScrollText
+              data={{ groups: [{ lines: ["OVER"] }] }}
+              align="center"
+            />
             <div className={styles.line}></div>
-            <ScrollText data={{ groups: [{ lines: ["VIEW"] }] }} />
+            <ScrollText
+              data={{ groups: [{ lines: ["VIEW"] }] }}
+              align="center"
+            />
           </div>
-
-          <ScrollText
-            data={toScrollData(overview.description)}
-            align="center"
-          />
+          <div className={styles.description}>
+            <ScrollText
+              data={toScrollData(overview.description)}
+              align="center"
+            />
+          </div>
         </div>
 
         <div className={styles.overviewContent}>
