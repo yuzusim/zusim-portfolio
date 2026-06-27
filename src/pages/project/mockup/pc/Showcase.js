@@ -43,10 +43,13 @@ function Showcase({ project }) {
       {/* =========================
           FOREGROUND CONTENT
       ========================= */}
-      <div className={`${styles.ShowcaseInner} subPageTit`}>
+      <div className={`${styles.ShowcaseInner}`}>
         {/* TITLE */}
         {title && (
-          <div className={styles.showcaseTitle} style={{ color: title.color }}>
+          <div
+            className={`${styles.showcaseTitle} subPageTit`}
+            style={{ color: title.color }}
+          >
             {/* {title.lines.map((line, i) => (
               <h2 key={i}>{line}</h2>
             ))} */}
