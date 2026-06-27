@@ -106,16 +106,6 @@
     margin: 30px 0 0;
   }
 
-  .subPageTit {
-    .line {
-      display: inline;
-    }
-
-    .line::after {
-      content: " ";
-    }
-  }
-
   .paragraphMain .line,
   .paragraphSub .line,
   .paragraphText .line,
