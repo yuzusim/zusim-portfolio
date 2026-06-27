@@ -116,7 +116,7 @@
   .paragraphText .line,
   .subTit .line,
   .subPageTxt .line {
-    display: inline;
+    display: inline-block;
   }
 
   .paragraphMain .line::after,
