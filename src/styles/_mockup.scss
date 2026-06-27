@@ -91,16 +91,7 @@
 
     width: 100%;
     text-align: center;
-
-    // pointer-events: none;
-
-    h2 {
-      color: #fff;
-      font-size: clamp(42px, 4vw, 96px);
-      font-weight: 700;
-      line-height: 1.5em;
-      margin: 0 32px;
-    }
+    padding: 0 32px;
   }
 
   // grid slider 공통
@@ -135,7 +126,7 @@
   //
   @include mix.respond(mobile) {
     .showcaseTitle {
-      word-break: keep-all;
+      //word-break: keep-all;
     }
   }
 }

@@ -1,7 +1,9 @@
 import React from "react";
-import { FiArrowUpRight } from "react-icons/fi";
-
 import styles from "../ProjectDetail.module.scss";
+
+import ScrollText from "components/scrolltext/ScrollText";
+import { FiArrowUpRight } from "react-icons/fi";
+import { toScrollData } from "utils/toScrollData";
 
 function Overview({ project }) {
   const { overview } = project;
@@ -10,17 +12,23 @@ function Overview({ project }) {
     <section className={styles.overview}>
       <div className={styles.overviewInner}>
         <div className={styles.overviewTxt}>
-          <div className={styles.overviewTop}>
+          {/* <div className={styles.overviewTop}>
             <div className={`subPageTit`}>{overview.title.left}</div>
             <div className={styles.line}></div>
             <div className={`subPageTit`}>{overview.title.right}</div>
+          </div> */}
+
+          {/* ScrollText */}
+          <div className={`${styles.overviewTop} subPageTit`}>
+            <ScrollText data={{ groups: [{ lines: ["OVER"] }] }} />
+            <div className={styles.line}></div>
+            <ScrollText data={{ groups: [{ lines: ["VIEW"] }] }} />
           </div>
 
-          <div className={`${styles.description} pjSubTxt`}>
-            {overview.description.map((text, index) => (
-              <span key={index}>{text} </span>
-            ))}
-          </div>
+          <ScrollText
+            data={toScrollData(overview.description)}
+            align="center"
+          />
         </div>
 
         <div className={styles.overviewContent}>

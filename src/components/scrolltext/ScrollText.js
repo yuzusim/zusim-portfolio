@@ -1,14 +1,19 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./ScrollText.module.scss";
 
-function ScrollText({ data, startFromZero = false }) {
+function ScrollText({ data, startFromZero = false, align = "left" }) {
   const containerRef = useRef(null);
   const [progress, setProgress] = useState(0);
 
   const threshold = data?.threshold ?? 0.5;
 
   // =========================
-  // 1. 스크롤 진행도 계산 (0 ~ 1)
+  // 0. 안전한 데이터 가공 (핵심)
+  // =========================
+  const groups = data?.groups ?? [];
+
+  // =========================
+  // 1. 스크롤 진행도 계산
   // =========================
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +25,8 @@ function ScrollText({ data, startFromZero = false }) {
       let value;
 
       if (startFromZero) {
-        // 화면 상단에서 요소가 닿으면 progress = 0
-        // 화면 하단 지나면 progress = 1
         value = (windowHeight - rect.top) / (windowHeight + rect.height);
       } else {
-        // 기존 threshold 기반 계산
         const start = windowHeight;
         const end = windowHeight - rect.height * threshold;
         value = (start - rect.bottom) / (start - end);
@@ -35,36 +37,43 @@ function ScrollText({ data, startFromZero = false }) {
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
+
     return () => window.removeEventListener("scroll", handleScroll);
   }, [threshold, startFromZero]);
 
+  // groups 없으면 렌더 자체 안 함 (crash 방지)
+  if (!groups.length) return null;
+
   // =========================
-  // 2. 전체 글자 수 계산 (모든 문단 포함)
+  // 2. 총 글자 수 계산 (안전 버전)
   // =========================
-  const totalChars = data.groups.reduce((sum, group) => {
+  const totalChars = groups.reduce((sum, group) => {
     return (
-      sum + group.lines.reduce((lineSum, line) => lineSum + line.length, 0)
+      sum +
+      (group?.lines ?? []).reduce(
+        (lineSum, line) => lineSum + (line?.length ?? 0),
+        0,
+      )
     );
   }, 0);
 
   let currentCharIndex = 0;
 
   return (
-    <div ref={containerRef} className={styles.scrollText}>
-      {data.groups.map((group, gIdx) => (
+    <div ref={containerRef} className={`${styles.scrollText} ${styles[align]}`}>
+      {groups.map((group, gIdx) => (
         <div
           key={gIdx}
-          className={`${styles.group} ${group.className ? styles[group.className] : ""}`}
-          // style={{ marginBottom: group.marginBottom || 0 }}
+          className={`${styles.group} ${
+            group?.className ? styles[group.className] : ""
+          }`}
         >
-          {group.lines.map((line, lIdx) => (
-            <div
-              key={lIdx}
-              className={styles.line}
-              // style={{ marginBottom: group.lineGap || 0 }}
-            >
-              {line.split("").map((char, cIdx) => {
-                const charPoint = (currentCharIndex + 1) / totalChars;
+          {(group?.lines ?? []).map((line, lIdx) => (
+            <div key={lIdx} className={styles.line}>
+              {(line ?? "").split("").map((char, cIdx) => {
+                const charPoint =
+                  totalChars > 0 ? (currentCharIndex + 1) / totalChars : 1;
+
                 const isActive = progress >= charPoint;
                 currentCharIndex++;
 

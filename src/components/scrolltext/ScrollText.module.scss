@@ -9,17 +9,6 @@
 .group {
 }
 
-.line {
-  line-height: 1.6;
-  display: block;
-}
-
-.char {
-  display: inline-block;
-  //   opacity: 0.2;
-  //   transition: opacity 0.3s ease;
-}
-
 // 메인 타이틀
 // .bigTit {
 //   font-size: 96px;
@@ -32,6 +21,45 @@
   font-size: 38px;
   margin: 50px 0 0;
   line-height: 1.5em;
+}
+
+// 정렬
+.scrollText {
+  // width: 100%;
+}
+
+/* LEFT */
+.left {
+  text-align: left;
+}
+
+/* CENTER */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.group {
+}
+
+.line {
+  line-height: 1.6;
+  display: block;
+}
+
+.char {
+  display: inline-block;
+  //   opacity: 0.2;
+  //   transition: opacity 0.3s ease;
 }
 
 ///////////// 문단별 스타일 //////////////////

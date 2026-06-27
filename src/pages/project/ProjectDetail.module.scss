@@ -78,7 +78,7 @@
   padding: 100px 60px;
 
   .overviewTxt {
-    text-align: center;
+    // text-align: center;
 
     .overviewTop {
       display: flex;
@@ -90,24 +90,29 @@
         height: 1px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.5);
         margin: 0 20px 0;
+
+        @include mix.respond(mobile) {
+          width: 100px;
+        }
       }
     }
 
     .description {
-      margin: 50px 0;
+      //text-align: center;
+      // margin: 50px 0 100px;
 
-      span {
-        display: block;
-      }
+      // span {
+      //   display: block;
+      // }
     }
 
     // 767
     @include mix.respond(mobile) {
-      .description {
-        span {
-          display: inline;
-        }
-      }
+      // .description {
+      //   span {
+      //     display: inline;
+      //   }
+      // }
     }
   }
 
@@ -115,6 +120,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     //gap: 40px;
+    padding: 20px 0;
 
     .summaryTitle {
       border-bottom: 1px solid rgba(0, 0, 0, 0.5);

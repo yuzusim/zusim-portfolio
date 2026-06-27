@@ -43,13 +43,24 @@ function Showcase({ project }) {
       {/* =========================
           FOREGROUND CONTENT
       ========================= */}
-      <div className={`${styles.ShowcaseInner} ${styles.delphicVisual}`}>
+      <div className={`${styles.ShowcaseInner} subPageTit`}>
         {/* TITLE */}
         {title && (
           <div className={styles.showcaseTitle} style={{ color: title.color }}>
-            {title.lines.map((line, i) => (
+            {/* {title.lines.map((line, i) => (
               <h2 key={i}>{line}</h2>
-            ))}
+            ))} */}
+
+            <ScrollText
+              data={{
+                groups: [
+                  {
+                    lines: title.lines,
+                  },
+                ],
+              }}
+              align="center"
+            />
           </div>
         )}
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import styles from "../../ProjectDetail.module.scss";
+
 import { getBackgroundStyle } from "utils/getBackgroundStyle";
 
 function Showcase({ project }) {

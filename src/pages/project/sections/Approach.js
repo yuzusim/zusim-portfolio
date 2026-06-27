@@ -1,4 +1,6 @@
 import styles from "../ProjectDetail.module.scss";
+
+import ScrollText from "components/scrolltext/ScrollText";
 import { getBackgroundStyle } from "utils/getBackgroundStyle";
 
 function Approach({ project }) {
@@ -13,7 +15,9 @@ function Approach({ project }) {
       <div className={styles.approachInner}>
         <div className={styles.approachTxtTop}>
           <p className={`${styles.approachTxt} pjSubTxt`}>{txt}</p>
-          <h2 className={`${styles.approachTitle} subPageTit`}>{title}</h2>
+          <h2 className={`${styles.approachTitle} subPageTit`}>
+            <ScrollText data={{ groups: [{ lines: [title] }] }} />
+          </h2>
         </div>
 
         <div className={styles.approachList}>
