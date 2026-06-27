@@ -106,12 +106,21 @@
     margin: 30px 0 0;
   }
 
+  .subPageTit {
+    .line {
+      display: inline;
+    }
+
+    .line::after {
+      content: " ";
+    }
+  }
+
   .paragraphMain .line,
   .paragraphSub .line,
   .paragraphText .line,
   .subTit .line,
-  .subPageTxt .line,
-  .subPageTit .line {
+  .subPageTxt .line {
     display: inline;
   }
 
@@ -119,8 +128,7 @@
   .paragraphSub .line::after,
   .paragraphText .line::after,
   .subTit .line::after,
-  .subPageTxt .line::after,
-  .subPageTit .line::after {
+  .subPageTxt .line::after {
     content: " ";
   }
 }
