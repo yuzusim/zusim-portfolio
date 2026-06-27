@@ -9,17 +9,6 @@
 .group {
 }
 
-.line {
-  line-height: 1.6;
-  display: block;
-}
-
-.char {
-  display: inline-block;
-  //   opacity: 0.2;
-  //   transition: opacity 0.3s ease;
-}
-
 // 메인 타이틀
 // .bigTit {
 //   font-size: 96px;
@@ -121,15 +110,17 @@
   .paragraphSub .line,
   .paragraphText .line,
   .subTit .line,
-  .subPageTxt .line {
-    display: contents;
+  .subPageTxt .line,
+  .subPageTit .line {
+    display: inline;
   }
 
   .paragraphMain .line::after,
   .paragraphSub .line::after,
   .paragraphText .line::after,
   .subTit .line::after,
-  .subPageTxt .line::after {
+  .subPageTxt .line::after,
+  .subPageTit .line::after {
     content: " ";
   }
 }
