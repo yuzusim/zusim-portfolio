@@ -91,6 +91,7 @@
 
     width: 100%;
     text-align: center;
+
     padding: 0 32px;
   }
 
@@ -167,8 +168,8 @@
 
   .ShowcaseInner {
     height: 150dvh;
-    // display: grid;
-    // grid-template-columns: repeat(4, auto);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
   }
 
   .rotateBox {

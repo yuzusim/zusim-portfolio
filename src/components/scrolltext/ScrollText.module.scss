@@ -9,6 +9,17 @@
 .group {
 }
 
+.line {
+  line-height: 1.6;
+  display: block;
+}
+
+.char {
+  display: inline-block;
+  //   opacity: 0.2;
+  //   transition: opacity 0.3s ease;
+}
+
 // 메인 타이틀
 // .bigTit {
 //   font-size: 96px;
@@ -25,7 +36,7 @@
 
 // 정렬
 .scrollText {
-  width: 100%;
+  //width: 100%;
 }
 
 /* LEFT */
@@ -35,36 +46,29 @@
 
 /* CENTER */
 .center {
-  //display: flex;
+  // display: flex;
   // flex-direction: column;
-  // justify-content: center;
   // align-items: center;
-
   text-align: center;
 }
 
 /* RIGHT */
 .right {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .group {
-  width: 100%;
 }
 
 .line {
-  width: 100%;
-  display: block;
   line-height: 1.6;
+  display: block;
 }
 
 .char {
-  //  display: inline-block;
-  display: inline;
-  //   opacity: 0.2;
-  //   transition: opacity 0.3s ease;
+  display: inline-block;
 }
 
 ///////////// 문단별 스타일 //////////////////
@@ -118,7 +122,7 @@
   .paragraphText .line,
   .subTit .line,
   .subPageTxt .line {
-    display: inline;
+    display: contents;
   }
 
   .paragraphMain .line::after,
