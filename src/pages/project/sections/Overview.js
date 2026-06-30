@@ -12,14 +12,14 @@ function Overview({ project }) {
     <section className={styles.overview}>
       <div className={styles.overviewInner}>
         <div className={styles.overviewTxt}>
-          {/* <div className={styles.overviewTop}>
+          <div className={styles.overviewTop}>
             <div className={`subPageTit`}>{overview.title.left}</div>
             <div className={styles.line}></div>
             <div className={`subPageTit`}>{overview.title.right}</div>
-          </div> */}
+          </div>
 
           {/* ScrollText */}
-          <div className={`${styles.overviewTop} subPageTit`}>
+          {/* <div className={`${styles.overviewTop} subPageTit`}>
             <ScrollText
               data={{ groups: [{ lines: ["OVER"] }] }}
               align="center"
@@ -29,7 +29,7 @@ function Overview({ project }) {
               data={{ groups: [{ lines: ["VIEW"] }] }}
               align="center"
             />
-          </div>
+          </div> */}
           <div className={styles.description}>
             <ScrollText
               data={toScrollData(overview.description)}

@@ -50,11 +50,11 @@ function Showcase({ project }) {
             className={`${styles.showcaseTitle} subPageTit`}
             style={{ color: title.color }}
           >
-            {/* {title.lines.map((line, i) => (
+            {title.lines.map((line, i) => (
               <h2 key={i}>{line}</h2>
-            ))} */}
+            ))}
 
-            <ScrollText
+            {/* <ScrollText
               data={{
                 groups: [
                   {
@@ -63,7 +63,7 @@ function Showcase({ project }) {
                 ],
               }}
               align="center"
-            />
+            /> */}
           </div>
         )}
 
