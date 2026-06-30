@@ -6,7 +6,6 @@ import { getBackgroundStyle } from "utils/getBackgroundStyle";
 function Approach({ project }) {
   const { approach } = project;
   const { txt, title, items, background } = approach;
-  //const { background } = approach;
 
   return (
     <section className={styles.approach} style={getBackgroundStyle(background)}>

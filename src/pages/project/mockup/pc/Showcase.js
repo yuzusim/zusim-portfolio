@@ -1,5 +1,4 @@
 import styles from "../../ProjectDetail.module.scss";
-import ScrollText from "components/scrolltext/ScrollText";
 
 function Showcase({ project }) {
   const showcase = project?.mockup?.pc?.showcase;
