@@ -131,10 +131,9 @@
   //
   @include mix.respond(mobile) {
     .showcaseTitle {
-      //word-break: keep-all;
-
       h2 {
         font-size: 42px;
+        word-break: keep-all;
       }
     }
   }
