@@ -93,6 +93,10 @@
     text-align: center;
 
     padding: 0 32px;
+
+    h2 {
+      font-size: 96px;
+    }
   }
 
   // grid slider 공통
@@ -128,6 +132,10 @@
   @include mix.respond(mobile) {
     .showcaseTitle {
       //word-break: keep-all;
+
+      h2 {
+        font-size: 42px;
+      }
     }
   }
 }
