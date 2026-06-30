@@ -1,5 +1,6 @@
 export const benzData = {
   id: 2,
+  slug: "mercedes-benz",
 
   sections: [
     "intro",

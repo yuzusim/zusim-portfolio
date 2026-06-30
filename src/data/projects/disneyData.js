@@ -1,5 +1,6 @@
 export const disneyData = {
   id: 3,
+  slug: "disneyplus",
 
   sections: [
     "intro",

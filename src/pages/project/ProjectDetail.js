@@ -17,9 +17,16 @@ function ProjectDetail() {
   // 스크롤 최상단
   useScrollTop();
 
-  const { id } = useParams();
+  // const { id } = useParams();
 
-  const project = projectDetailData.find((item) => item.id === Number(id));
+  const { slug } = useParams();
+
+  const project = projectDetailData.find((item) => item.slug === slug);
+
+  console.log("slug:", slug);
+  console.log("project:", project);
+
+  // const project = projectDetailData.find((item) => item.id === Number(id));
 
   if (!project) return <div>Not Found</div>;
 

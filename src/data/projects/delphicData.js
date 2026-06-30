@@ -1,10 +1,12 @@
 export const delphicData = {
   id: 1,
+  slug: "delphic",
 
   sections: [
     "intro",
     "overview",
     "approach",
+    "pcStagger",
     "mobileShowcase",
     "pcShowcase",
     "tabletShowcase",

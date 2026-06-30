@@ -35,7 +35,8 @@ function App() {
           <Route path="/service-closed" element={<ServiceClosed />} />
 
           {/* Project */}
-          <Route path="/project/:id" element={<ProjectDetail />} />
+          {/* <Route path="/project/:id" element={<ProjectDetail />} /> */}
+          <Route path="/project/:slug" element={<ProjectDetail />} />
           {/* <Route path="/project/:id/demo" element={<ProjectDemo />} /> */}
         </Route>
       </Routes>

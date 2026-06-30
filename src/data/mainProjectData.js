@@ -1,6 +1,7 @@
 export const mainProjectData = [
   {
     id: 1,
+    slug: "delphic",
     title: "DELPHIC",
     visualType: "delphic",
     desc: ["UI/UX", "Responsive Web Redesign"],
@@ -30,6 +31,7 @@ export const mainProjectData = [
   {
     id: 2,
     title: "BENZ",
+    slug: "mercedes-benz",
     visualType: "benz",
     desc: ["UI/UX", "Responsive Web Redesign"],
     bgType: "color",
@@ -58,6 +60,7 @@ export const mainProjectData = [
   },
   {
     id: 3,
+    slug: "disneyplus",
     title: "DISNEY +",
     visualType: "disney",
     desc: ["UI/UX", "Responsive Web Redesign"],

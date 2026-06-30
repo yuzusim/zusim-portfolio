@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "../../ProjectDetail.module.scss";
 
+import ScrollText from "components/scrolltext/ScrollText";
+
 function MockupStagger({ project }) {
   const stagger = project?.mockup?.pc?.stagger;
 
@@ -83,7 +85,18 @@ function MockupStagger({ project }) {
 
       <div className={`${styles.textBlock} ${active ? styles.textActive : ""}`}>
         <h2 className="subPageTit">{stagger.subtitle}</h2>
-        <p className="text">{stagger.sectionTxt}</p>
+        {/* <p className="text">{stagger.sectionTxt}</p> */}
+        <p className={`${styles.pjSubTxt} pjSubTxt`}>
+          <ScrollText
+            data={{
+              groups: [
+                {
+                  lines: [String(stagger.sectionTxt)],
+                },
+              ],
+            }}
+          />
+        </p>
       </div>
     </section>
   );

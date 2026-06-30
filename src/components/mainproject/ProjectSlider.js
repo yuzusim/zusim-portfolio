@@ -79,8 +79,15 @@ function ProjectSlider() {
                       MORE
                     </Link> */}
 
-                    <Link
+                    {/* <Link
                       to={`/project/${project.id}`}
+                      className={styles.linkBtn}
+                    >
+                      MORE
+                    </Link> */}
+
+                    <Link
+                      to={`/project/${project.slug}`}
                       className={styles.linkBtn}
                     >
                       MORE
