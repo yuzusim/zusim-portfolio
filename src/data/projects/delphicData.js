@@ -240,6 +240,8 @@ export const delphicData = {
           enabled: true,
         },
 
+        axis: "column",
+
         images: [
           {
             src: "/images/projects/delphic/del_m_mockup_1.jpg",

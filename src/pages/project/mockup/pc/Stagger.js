@@ -83,15 +83,25 @@ function MockupStagger({ project }) {
         </div>
       </div>
 
-      <div className={`${styles.textBlock} ${active ? styles.textActive : ""}`}>
+      <div className={`${styles.textBox} ${active ? styles.textActive : ""}`}>
         <h2 className="subPageTit">{stagger.subtitle}</h2>
         {/* <p className="text">{stagger.sectionTxt}</p> */}
         <p className={`${styles.pjSubTxt} pjSubTxt`}>
-          <ScrollText
+          {/* <ScrollText
             data={{
               groups: [
                 {
                   lines: [String(stagger.sectionTxt)],
+                },
+              ],
+            }}
+          /> */}
+
+          <ScrollText
+            data={{
+              groups: [
+                {
+                  lines: stagger.sectionTxt,
                 },
               ],
             }}
