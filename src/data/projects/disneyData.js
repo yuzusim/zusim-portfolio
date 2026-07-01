@@ -2,15 +2,6 @@ export const disneyData = {
   id: 3,
   slug: "disneyplus",
 
-  // sections: [
-  //   "intro",
-  //   "overview",
-  //   "approach",
-  //   "pcShowcase",
-  //   "mobileShowcase",
-  //   "designSystem",
-  // ],
-
   sections: [
     { type: "section", key: "intro" },
     { type: "section", key: "overview" },
@@ -241,61 +232,41 @@ export const disneyData = {
       showcase: {
         background: {
           type: "none", // image | gradient | color | none
-
-          // color: "#111827",
         },
 
         fade: {
           enabled: true,
         },
 
+        axis: "row",
+
         images: [
           {
             src: "/images/projects/disneyplus/disney_m_mockup_1.jpg",
             size: "medium",
-            column: 1,
+            row: 1,
           },
           {
             src: "/images/projects/disneyplus/disney_m_mockup_2.jpg",
             size: "medium",
-            column: 1,
+            row: 1,
           },
           {
             src: "/images/projects/disneyplus/disney_m_mockup_3.jpg",
             size: "medium",
-            column: 1,
+            row: 1,
           },
 
           {
             src: "/images/projects/disneyplus/disney_m_mockup_4.jpg",
             size: "medium",
-            column: 2,
-          },
-          {
-            src: "/images/projects/disneyplus/disney_m_mockup_5.jpg",
-            size: "medium",
-            column: 2,
-          },
-          {
-            src: "/images/projects/disneyplus/disney_m_mockup_3.jpg",
-            size: "medium",
-            column: 2,
+            row: 1,
           },
 
           {
-            src: "/images/projects/disneyplus/disney_m_mockup_4.jpg",
-            size: "medium",
-            column: 3,
-          },
-          {
             src: "/images/projects/disneyplus/disney_m_mockup_5.jpg",
             size: "medium",
-            column: 3,
-          },
-          {
-            src: "/images/projects/disneyplus/disney_m_mockup_3.jpg",
-            size: "medium",
-            column: 3,
+            row: 1,
           },
         ],
       },
@@ -338,13 +309,6 @@ export const disneyData = {
           },
         ],
       },
-    },
-  },
-
-  interaction: {
-    slider: {
-      basic: {},
-      hover: {},
     },
   },
 

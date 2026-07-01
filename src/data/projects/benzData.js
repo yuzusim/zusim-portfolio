@@ -2,25 +2,13 @@ export const benzData = {
   id: 2,
   slug: "mercedes-benz",
 
-  // sections: [
-  //   "intro",
-  //   "overview",
-  //   "approach",
-  //   "pcShowcase",
-  //   "movieSlider",
-  //   "mobileShowcase",
-  //   "designSystem",
-  // ],
-
   sections: [
     { type: "section", key: "intro" },
     { type: "section", key: "overview" },
     { type: "section", key: "approach" },
     { type: "section", key: "pcShowcase" },
     { type: "section", key: "textBlock" },
-
     { type: "slider", key: "history" },
-
     { type: "section", key: "mobileShowcase" },
     { type: "section", key: "designSystem" },
   ],
@@ -260,6 +248,8 @@ export const benzData = {
         fade: {
           enabled: true,
         },
+
+        axis: "column",
 
         images: [
           {

@@ -163,7 +163,7 @@
 //   }
 // }
 
-// 모바일 목업
+// 모바일 column 목업
 @keyframes columnUp {
   from {
     transform: translate3d(0, 0, 0);
@@ -179,6 +179,16 @@
   }
   to {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+// 모바일 row목업
+@keyframes rowLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(var(--move), 0, 0);
   }
 }
 
