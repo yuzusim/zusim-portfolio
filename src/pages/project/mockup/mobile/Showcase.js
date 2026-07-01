@@ -99,33 +99,31 @@ function Showcase({ project }) {
   const refs = useRef([]);
 
   // -------------------------------
-  // 1. key 추출 (row / column 대응)
-  // -------------------------------
-  const getKey = (img) => {
-    return axis === "row" ? (img.row ?? img.column) : img.column;
-  };
-
-  // -------------------------------
-  // 2. 그룹 생성 (중요: dependency 안정)
+  // key 계산 (useMemo dependency 문제 제거 위해 내부 고정)
   // -------------------------------
   const groups = useMemo(() => {
-    const keys = images.map(getKey);
+    const keys = images.map((img) =>
+      axis === "row" ? (img.row ?? img.column) : img.column,
+    );
+
     return [...new Set(keys)];
   }, [images, axis]);
 
   // -------------------------------
-  // 3. 애니메이션 방향
+  // direction class
   // -------------------------------
   const getDirectionClass = (index) => {
-    if (axis === "column") {
-      return index % 2 ? styles.columnUp : styles.columnDown;
-    }
-
-    return index % 2 ? styles.rowUp : styles.rowDown;
+    return axis === "column"
+      ? index % 2
+        ? styles.columnUp
+        : styles.columnDown
+      : index % 2
+        ? styles.rowUp
+        : styles.rowDown;
   };
 
   // -------------------------------
-  // 4. 무한 스크롤 거리 계산
+  // scroll 거리 계산
   // -------------------------------
   useEffect(() => {
     refs.current.forEach((el) => {
@@ -134,15 +132,14 @@ function Showcase({ project }) {
       if (axis === "column") {
         const h = el.scrollHeight / 2;
         el.style.setProperty("--move", `-${h}px`);
-      }
-
-      if (axis === "row") {
+      } else {
         const w = el.scrollWidth / 2;
         el.style.setProperty("--move", `-${w}px`);
       }
     });
   }, [images, axis]);
 
+  //
   if (!showcase) return null;
 
   return (
@@ -158,14 +155,18 @@ function Showcase({ project }) {
           "--fade-height": fade?.height || "50px",
         }}
       >
-        {groups.map((group) => {
-          const filtered = images.filter((img) => getKey(img) === group);
+        {groups.map((group, i) => {
+          const filtered = images.filter((img) =>
+            axis === "row"
+              ? (img.row ?? img.column) === group
+              : img.column === group,
+          );
 
           return (
             <div
               key={group}
-              ref={(el) => (refs.current[group] = el)}
-              className={`${styles.gridSlider} ${getDirectionClass(group)}`}
+              ref={(el) => (refs.current[i] = el)}
+              className={`${styles.gridSlider} ${getDirectionClass(i)}`}
             >
               {[...filtered, ...filtered].map((img, idx) => (
                 <div key={idx} className={styles.card}>
