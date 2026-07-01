@@ -17,6 +17,7 @@ export const benzData = {
     { type: "section", key: "overview" },
     { type: "section", key: "approach" },
     { type: "section", key: "pcShowcase" },
+    { type: "section", key: "textBlock" },
 
     { type: "slider", key: "history" },
 
@@ -231,6 +232,20 @@ export const benzData = {
       },
 
       gallery: {},
+
+      textBlock: {
+        title: [
+          "The history of Mercedes-Benz",
+          "People, milestones, motorsport.",
+        ],
+        txt: "메르세데스-벤츠는 시대를 초월한 디자인, 최첨단 기술과 디테일에 대한 관심을 바탕으로 한 흥미로운 경험을 의미합니다.",
+
+        background: {
+          type: "color",
+          color: "#000",
+          overlay: 0.6,
+        },
+      },
     },
 
     mobile: {
@@ -337,19 +352,6 @@ export const benzData = {
       },
     },
   },
-
-  // interaction: {
-  //   slider: {
-  //     basic: {},
-  //     hover: {},
-  //   },
-  // },
-
-  // slider: {
-  //   movieSlider: "movie",
-
-  //   // historySlider: null,
-  // },
 
   // design system
   designSystem: {

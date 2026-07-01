@@ -393,3 +393,44 @@
   @include mix.respond(mobile) {
   }
 }
+
+.textBlock {
+  padding: 150px 60px 100px;
+  text-align: end;
+  color: rgba(255, 255, 255, 0.8);
+
+  .textBlockTxtWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 150px;
+
+    .textBlockTitle {
+      margin-left: 100px;
+    }
+
+    .textBlockTxt {
+      margin-left: 300px;
+    }
+  }
+
+  @include mix.respond(mobile) {
+    padding: 100px 32px;
+    text-align: center;
+
+    gap: 50px;
+
+    .textBlockTxtWrap {
+      align-items: center;
+      gap: 50px;
+
+      .textBlockTitle {
+        margin-left: 0;
+      }
+
+      .textBlockTxt {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -11,6 +11,7 @@ import DesignSystem from "./sections/DesignSystem";
 import PcStagger from "./mockup/pc/Stagger";
 import MobileShowcase from "./mockup/mobile/Showcase";
 import PcShowcase from "./mockup/pc/Showcase";
+import TextBlock from "./mockup/pc/TextBlock";
 import TabletShowcase from "./mockup/tablet/Showcase";
 
 import MovieSlider from "components/slider/presets/MovieSlider";
@@ -36,6 +37,7 @@ function ProjectDetail() {
     pcStagger: PcStagger,
     mobileShowcase: MobileShowcase,
     pcShowcase: PcShowcase,
+    textBlock: TextBlock,
     tabletShowcase: TabletShowcase,
     designSystem: DesignSystem,
   };
