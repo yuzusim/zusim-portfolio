@@ -177,6 +177,12 @@
     height: 150dvh;
     display: grid;
     grid-template-columns: repeat(4, auto);
+
+    .showcaseTitle {
+      h2 {
+        color: rgb(255, 255, 255, 0.9);
+      }
+    }
   }
 
   .rotateBox {

@@ -2,15 +2,26 @@ export const delphicData = {
   id: 1,
   slug: "delphic",
 
+  // sections: [
+  //   "intro",
+  //   "overview",
+  //   "approach",
+  //   "pcStagger",
+  //   "mobileShowcase",
+  //   "pcShowcase",
+  //   "tabletShowcase",
+  //   "designSystem",
+  // ],
+
   sections: [
-    "intro",
-    "overview",
-    "approach",
-    "pcStagger",
-    "mobileShowcase",
-    "pcShowcase",
-    "tabletShowcase",
-    "designSystem",
+    { type: "section", key: "intro" },
+    { type: "section", key: "overview" },
+    { type: "section", key: "approach" },
+    { type: "section", key: "pcStagger" },
+    { type: "section", key: "pcShowcase" },
+    // { type: "slider", key: "movie" },
+    { type: "section", key: "mobileShowcase" },
+    { type: "section", key: "designSystem" },
   ],
 
   title: {

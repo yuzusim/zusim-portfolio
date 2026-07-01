@@ -1,0 +1,275 @@
+@use "./variables" as var;
+@use "./mixins" as mix;
+@use "styles/animations" as ani;
+
+////////////////////////// Common Slider ///////////////////////
+.sliderWrap {
+  padding: 200px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+
+  :global(.swiper) {
+    overflow: visible;
+  }
+
+  // 767
+  @include mix.respond(mobile) {
+    padding: 100px 32px;
+    flex-direction: column;
+  }
+}
+
+.sliderTxtWrap {
+  width: 50%;
+  margin-right: 60px;
+  position: relative;
+
+  .sliderTitle {
+    h2 {
+      // font-size: 96px;
+    }
+  }
+
+  .sliderText {
+    margin: 50px 0;
+  }
+
+  @include mix.respond(mobile) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.sliderArea {
+  width: 50%;
+  position: relative;
+  // z-index: 1;
+
+  @include mix.respond(mobile) {
+    width: 100%;
+  }
+}
+
+.sliderInner {
+  overflow: hidden;
+}
+
+.slideItem {
+  width: 100%;
+  position: relative;
+  padding: 4px;
+  border-radius: 16px;
+}
+
+///////////////////////// Movie Slider ////////////////////////////
+
+.movieSlider {
+  .slideItem {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      padding: 4px;
+      border-radius: inherit;
+
+      background: linear-gradient(
+        130deg,
+        rgba(2, 214, 232, 0.9),
+        rgba(255, 255, 255, 0.8)
+      );
+
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+
+      opacity: 0;
+      transition: 0.25s;
+      pointer-events: none;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .card {
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.8)
+    );
+  }
+
+  .posterWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 5 / 6;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.35s;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: auto 0 0;
+      height: 40%;
+
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    }
+  }
+
+  .info {
+    padding: 12px 30px 14px;
+    min-height: 120px;
+    text-align: center;
+  }
+
+  .titleImg {
+    width: 100%;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+
+  .ageWrap {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  .age {
+    width: auto;
+    height: 20px;
+  }
+
+  .year {
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  // 767
+  @include mix.respond(mobile) {
+  }
+}
+
+/////////////////////////////// History Slider /////////////////////////////////////
+.HistorySlider {
+  .slideItem {
+    position: relative;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 0.5s;
+    background: center center / cover no-repeat;
+
+    @include mix.respond(mobile) {
+      height: 350px;
+    }
+  }
+
+  .historyCard {
+    position: relative;
+
+    .historyImg {
+      width: 100%;
+      display: block;
+    }
+
+    .historyInfo {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      .year {
+        font-size: 20px;
+        margin: 0 0 160px;
+        font-weight: 300;
+      }
+
+      .historyTitle {
+        //margin: 130px 0 0;
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .beforeIcon {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px;
+        height: 30px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #000;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .afterText {
+        width: 100%;
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        font-size: 22px;
+
+        text-align: center;
+        pointer-events: none;
+      }
+
+      @include mix.respond(mobile) {
+        .year {
+          margin: 0 0 100px;
+        }
+
+        .historyTitle {
+          // font-size: 20px;
+        }
+        .beforeIcon {
+          bottom: -30px;
+          width: 20px;
+          height: 20px;
+        }
+
+        .afterText {
+          bottom: -60px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  // 767
+  @include mix.respond(mobile) {
+  }
+}

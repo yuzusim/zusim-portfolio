@@ -5,7 +5,7 @@ import styles from "./Work.module.scss";
 import AnimatedText from "components/text/AnimatedText";
 import ScrollText from "components/scrolltext/ScrollText";
 
-import { useScrollTop } from "hooks/useScrollTop ";
+import { useScrollTop } from "hooks/useScrollTop";
 import { workData } from "data/workData";
 import { workscrollTextData } from "data/workData";
 

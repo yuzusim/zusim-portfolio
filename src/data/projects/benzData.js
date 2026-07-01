@@ -2,13 +2,26 @@ export const benzData = {
   id: 2,
   slug: "mercedes-benz",
 
+  // sections: [
+  //   "intro",
+  //   "overview",
+  //   "approach",
+  //   "pcShowcase",
+  //   "movieSlider",
+  //   "mobileShowcase",
+  //   "designSystem",
+  // ],
+
   sections: [
-    "intro",
-    "overview",
-    "approach",
-    "pcShowcase",
-    "mobileShowcase",
-    "designSystem",
+    { type: "section", key: "intro" },
+    { type: "section", key: "overview" },
+    { type: "section", key: "approach" },
+    { type: "section", key: "pcShowcase" },
+
+    { type: "slider", key: "history" },
+
+    { type: "section", key: "mobileShowcase" },
+    { type: "section", key: "designSystem" },
   ],
 
   title: {
@@ -325,12 +338,18 @@ export const benzData = {
     },
   },
 
-  interaction: {
-    slider: {
-      basic: {},
-      hover: {},
-    },
-  },
+  // interaction: {
+  //   slider: {
+  //     basic: {},
+  //     hover: {},
+  //   },
+  // },
+
+  // slider: {
+  //   movieSlider: "movie",
+
+  //   // historySlider: null,
+  // },
 
   // design system
   designSystem: {

@@ -2,13 +2,24 @@ export const disneyData = {
   id: 3,
   slug: "disneyplus",
 
+  // sections: [
+  //   "intro",
+  //   "overview",
+  //   "approach",
+  //   "pcShowcase",
+  //   "mobileShowcase",
+  //   "designSystem",
+  // ],
+
   sections: [
-    "intro",
-    "overview",
-    "approach",
-    "pcShowcase",
-    "mobileShowcase",
-    "designSystem",
+    { type: "section", key: "intro" },
+    { type: "section", key: "overview" },
+    { type: "section", key: "approach" },
+    // { type: "section", key: "pcStagger" },
+    { type: "section", key: "pcShowcase" },
+    { type: "slider", key: "movie" },
+    { type: "section", key: "mobileShowcase" },
+    { type: "section", key: "designSystem" },
   ],
 
   title: {

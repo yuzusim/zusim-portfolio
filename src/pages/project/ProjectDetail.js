@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 
 import { projectDetailData } from "data/projects";
-import { useScrollTop } from "hooks/useScrollTop ";
+import { useScrollTop } from "hooks/useScrollTop";
 
 import Intro from "./sections/Intro";
 import Overview from "./sections/Overview";
@@ -13,39 +13,75 @@ import MobileShowcase from "./mockup/mobile/Showcase";
 import PcShowcase from "./mockup/pc/Showcase";
 import TabletShowcase from "./mockup/tablet/Showcase";
 
-function ProjectDetail() {
-  // 스크롤 최상단
-  useScrollTop();
+import MovieSlider from "components/slider/presets/MovieSlider";
+import HistorySlider from "components/slider/presets/HistorySlider";
+import { sliders } from "data/sliders";
 
-  // const { id } = useParams();
+function ProjectDetail() {
+  useScrollTop();
 
   const { slug } = useParams();
 
   const project = projectDetailData.find((item) => item.slug === slug);
 
-  console.log("slug:", slug);
-  console.log("project:", project);
-
-  // const project = projectDetailData.find((item) => item.id === Number(id));
-
   if (!project) return <div>Not Found</div>;
 
+  // =========================
+  // COMPONENT MAP
+  // =========================
   const sectionComponents = {
-    intro: <Intro project={project} />,
-    overview: <Overview project={project} />,
-    approach: <Approach project={project} />,
-    pcStagger: <PcStagger project={project} />,
-    mobileShowcase: <MobileShowcase project={project} />,
-    pcShowcase: <PcShowcase project={project} />,
-    tabletShowcase: <TabletShowcase project={project} />,
-    designSystem: <DesignSystem project={project} />,
+    intro: Intro,
+    overview: Overview,
+    approach: Approach,
+    pcStagger: PcStagger,
+    mobileShowcase: MobileShowcase,
+    pcShowcase: PcShowcase,
+    tabletShowcase: TabletShowcase,
+    designSystem: DesignSystem,
   };
+
+  console.log(project.sections);
+  console.log(sliders);
 
   return (
     <div id="projectDetail">
-      {project.sections.map((section) => (
-        <div key={section}>{sectionComponents[section]}</div>
-      ))}
+      {project.sections.map((section) => {
+        // =========================
+        // SLIDER TYPE
+
+        if (section.type === "slider") {
+          const config = sliders?.[section.key];
+
+          if (!section.key || !config?.items?.length) return null;
+
+          const SliderUI = {
+            movie: MovieSlider,
+            history: HistorySlider,
+          }[section.key];
+
+          if (!SliderUI) return null;
+
+          return (
+            <section className="section" key={section.key}>
+              <SliderUI config={config} />
+            </section>
+          );
+        }
+
+        // =========================
+        // NORMAL COMPONENT TYPE
+        // =========================
+        const Component = sectionComponents[section.key];
+
+        // 🔥 2차 방어
+        if (!Component) return null;
+
+        return (
+          <div key={section.key}>
+            <Component project={project} />
+          </div>
+        );
+      })}
     </div>
   );
 }

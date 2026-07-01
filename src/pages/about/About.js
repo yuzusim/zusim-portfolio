@@ -5,7 +5,7 @@ import ScrollText from "components/scrolltext/ScrollText";
 import SkillsSection from "components/skills/SkillsSection";
 import Career from "components/career/Career";
 
-import { useScrollTop } from "hooks/useScrollTop ";
+import { useScrollTop } from "hooks/useScrollTop";
 import { useIsMobile } from "hooks/useIsMobile";
 import { aboutData } from "data/aboutData";
 
