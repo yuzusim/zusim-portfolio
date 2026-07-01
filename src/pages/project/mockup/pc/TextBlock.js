@@ -1,7 +1,7 @@
 import styles from "../../ProjectDetail.module.scss";
-
 import ScrollText from "components/scrolltext/ScrollText";
 import { getBackgroundStyle } from "utils/getBackgroundStyle";
+import { toScrollData } from "utils/toScrollData";
 
 function TextBlock({ project }) {
   const textBlock = project?.mockup?.pc?.textBlock;
@@ -14,33 +14,21 @@ function TextBlock({ project }) {
       className={`${styles.textBlock}`}
       style={getBackgroundStyle(background)}
     >
-      <div className={styles.textBlockTxtWrap}>
-        <h2 className={`${styles.textBlockTitle} subPageTit`}>
-          {title.map((item, i) => (
-            <span key={i}>
-              {item}
-              <br />
-            </span>
-          ))}
-        </h2>
+      <div className={styles.textBlockInner}>
+        <div className={styles.textBlockTxtWrap}>
+          <h2 className={`${styles.textBlockTitle} subPageTit`}>
+            {title.map((item, i) => (
+              <span key={i}>
+                {item}
+                <br />
+              </span>
+            ))}
+          </h2>
 
-        {/* <p className={`${styles.textBlockTxt} pjSubTxt`}>{txt}</p> */}
-        <p className={`${styles.textBlockTxt} pjSubTxt`}>
-          <ScrollText
-            data={{
-              groups: [
-                {
-                  lines:
-                    typeof txt === "string"
-                      ? txt.split(". ")
-                      : Array.isArray(txt)
-                        ? txt
-                        : [],
-                },
-              ],
-            }}
-          />
-        </p>
+          <div className={styles.textBlockTxt}>
+            <ScrollText data={toScrollData(txt)} />
+          </div>
+        </div>
       </div>
     </section>
   );
