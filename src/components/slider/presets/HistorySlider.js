@@ -79,15 +79,3 @@ function HistorySlider({ config }) {
 }
 
 export default HistorySlider;
-
-{
-  /* <img src={item.logo} />
-
-<span>{item.year}</span>
-
-<h3>{item.title}</h3>
-
-<p>{item.subtitle}</p>
-
-<img src={item.image} /> */
-}
